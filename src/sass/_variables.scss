@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Neue';
+    src: url('../../public/Fonts/Neue Montreal.woff2') format('woff2');
+    font-weight: 100; // Regular
+    font-style:oblique;
+    font-display: swap;
+}
+
+
+// Cambiar el color primary (azul)
+$primary: #0A287E;
+$secondary: #f3f3e9;
+
+// Asignar "Neue" como fuente base para todo el contenido
+$font-family-base: 'Neue', sans-serif; // Fuente regular para texto normal
+
+// Asignar "Neue" para los encabezados (h1, h2, etc.)
+$font-family-headings: 'Neue', sans-serif; // Usar 'Neue' para los encabezados también
+
+// Cambiar el peso de los encabezados a **bold** (negrita)
+ // Los encabezados tendrán el peso bold automáticamente
+
+// Importa Bootstrap SASS después de personalizar las variables
+@import 'bootstrap/scss/bootstrap';
