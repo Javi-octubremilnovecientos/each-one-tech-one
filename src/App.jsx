@@ -6,13 +6,13 @@ import { SingleNewPage } from "./Pages/SingleNewPage";
 import { ContactPage } from "./Pages/ContactPage";
 import { TechRapsodyPage } from "./Pages/TechRapsodyPage";
 import { SubscribePage } from "./Pages/SubscribePage";
-import "./App.css"
+
 
 
 
 function App() {
   return (
-    <>
+ <>
       <Routes>
         <Route path="*" element={<NotFound/>} />
         <Route path="/" element={<HomePage/>} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/Rapsodhy" element={<TechRapsodyPage/>} />
       </Routes>
-    </>
+</>
   );
 }
 

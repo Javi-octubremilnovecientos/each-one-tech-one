@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Neue-Light";
+  src: url("../public/Fonts/NeueMontreal-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue-Medium";
+  src: url("../public/Fonts/NeueMontreal-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue-Regular";
+  src: url("../public/Fonts/NeueMontreal-Regular.woff2") format("woff2");
+  font-weight: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue-Bold";
+  src: url("../public/Fonts/NeueMontreal-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Eiko";
+  src: url("../public/Fonts/PPEiko-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Eiko-Heavy";
+  src: url("../public/Fonts/PPEiko-Heavy.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+body {
+
+  background-size: contain;
+}
