@@ -4,7 +4,7 @@ export const OtherNewsCard = () => {
   return (
     <>
       <div className="card card-second p-1  border-top border-white-50 border-3 " style={{backgroundColor:"transparent", border:"none"}}>
-      <div className="col-6 ms-1 pt-2" style={{ fontFamily: "Neue-Light" }}>
+      <div className="col-6 d-flex ms-1 pt-2" style={{ fontFamily: "Neue-Light" }}>
           <a
             href="#"
             className="btn btn-sm border border-primary text-primary rounded-pill me-2 "
@@ -27,13 +27,13 @@ export const OtherNewsCard = () => {
             Godard and his wife
           </h5>
           <p
-            className="card-subtitle"
+            className="card-subtitle mb-3"
             style={{ fontFamily: "Neue-Light" }}
           >
             July 04.2023
           </p>
         </div>
-        <img className="card-img" src={cuadro} alt="" />
+        <img className="card-img pt- rounded-4" src={cuadro} alt="" style={{aspectRatio:"1/1",objectFit:"cover"}}/>
       </div>
     </>
   );

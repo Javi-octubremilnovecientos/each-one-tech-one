@@ -5,12 +5,12 @@ import { OtherNewsCard } from '../Components/OtherNewsCard'
 export const TopicPage = () => {
   return (
     <>
-    <div className="container mb-0 ms-3 pb-0 ">
-      <div className="row pt-4 align-items-center"> 
-        <div className="col-12 py-4">
+    <div className="container-fluid m-0 pb-0  ">
+      <div className="row  ps-4 pt-5 pb-0 m-0 gy-1 border"> 
+        <div className="col-12 p-3  ">
           <h1 className='display-1 text-primary' style={{fontFamily:"Neue-Bold"}}>Arts</h1>
         </div>
-        <div className="col-12 d-flex ">
+        <div className="col-12 d-flex ps-2 pb-0 border  mb-0">
           <button className='btn m-1 btn-md border border-2 border-primary rounded-pill text-primary'>Geofa</button>
           <button className='btn m-1 btn-md border border-2 border-primary rounded-pill text-primary'>Geofklñklña</button>
           <button className='btn m-1 btn-md border border-2 border-primary rounded-pill text-primary'>Geofalñkñlk</button>
@@ -41,6 +41,7 @@ export const TopicPage = () => {
                   <div className="col-12 col-md-3 mb-2  p-3">
                     <OtherNewsCard />
                   </div>
+                 
                   <div className="col-12 col-md-3 mb-2  p-3">
                     <OtherNewsCard />
                   </div>
