@@ -20,7 +20,7 @@ function App() {
         <Route path="/single" element={<SingleNewPage />} />
         <Route path="/subscribe" element={<SubscribePage/>} />
         <Route path="/Contact" element={<ContactPage />} />
-        <Route path="/Rapsodhy" element={<TechRapsodyPage/>} />
+        <Route path="/Rapshody" element={<TechRapsodyPage/>} />
       </Routes>
 </>
   );

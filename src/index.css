@@ -2,6 +2,7 @@
   font-family: "Neue-Light";
   src: url("../public/Fonts/NeueMontreal-Light.woff2") format("woff2");
   font-weight: normal;
+
   font-display: swap;
 }
 @font-face {
@@ -38,6 +39,47 @@
 }
 
 body {
-
+  background-image: linear-gradient(to top, #f3f3e9 74%, transparent),
+    url("./assets/img/fondoFinal.webp");
   background-size: contain;
+  background-repeat: repeat-y;
+
+}
+section {
+  min-height: 80vh;
+
+}
+.separador{
+  display: block;
+  position: relative;
+  margin-top: 3%;
+  left:3%;
+  width: 94%;
+  height: 2px;
+  background-color:#0a297ed4 ;
+}
+.card-first {
+  max-height: 500px;
+  max-width: 700px;
+}
+.card-second {
+  max-height: 500px;
+  max-width: 370px;
+}
+
+
+.card-topic {
+  min-height: 590px;
+
+  max-width: 380px;
+  background-image: linear-gradient(to top, #0a297ed4, transparent 60%),
+    url("./assets/img/jean-luc-godard.jpg");
+  background-size: cover;
+  
+  background-position: center;
+}
+.card-trendy {
+ min-height: 180px;
+ max-height: 200px;
+  background-color: #0a297e28;
 }

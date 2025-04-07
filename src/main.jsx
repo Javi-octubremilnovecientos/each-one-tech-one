@@ -1,5 +1,6 @@
 
 import { createRoot } from 'react-dom/client'
+
 import "./sass/_variables.scss"
 import App from './App';
 
