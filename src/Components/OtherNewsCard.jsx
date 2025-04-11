@@ -1,8 +1,10 @@
 import React from "react";
-import cuadro from "../assets/img/cuadro.png";
-export const OtherNewsCard = () => {
+
+import { Link } from "react-router-dom";
+export const OtherNewsCard = ({title, date, img}) => {
   return (
-    <>
+    <article>
+      <Link to={"/single"} style={{textDecoration:"none"}}>
       <div className="card card-second p-1  border-top border-white-50 border-3 " style={{backgroundColor:"transparent", border:"none"}}>
       <div className="col-6 d-flex ms-1 pt-2" style={{ fontFamily: "Neue-Light" }}>
           <a
@@ -18,23 +20,22 @@ export const OtherNewsCard = () => {
             artist
           </a>
         </div>
-        <div className="card-body p-1">
+        <div className="card-body ">
         <h5
-            className="card-title h6 "
-            style={{ fontFamily: "Neue-Medium" }}
+            className="card-title h6 text-primary "
+            style={{ fontFamily: "Neue-Medium", }}
           >
-            Exclusive Interview With HollyWood Actor Winning Award, Jean Luc
-            Godard and his wife
+          {title}
           </h5>
           <p
-            className="card-subtitle mb-3"
+            className="card-subtitle mb-3 text-primary"
             style={{ fontFamily: "Neue-Light" }}
           >
-            July 04.2023
+           {date}
           </p>
         </div>
-        <img className="card-img pt- rounded-4" src={cuadro} alt="" style={{aspectRatio:"1/1",objectFit:"cover"}}/>
-      </div>
-    </>
+        <img className="card-img rounded-4" src={img} alt="" style={{aspectRatio:"1/1",objectFit:"cover"}}/>
+      </div></Link>
+    </article>
   );
 };

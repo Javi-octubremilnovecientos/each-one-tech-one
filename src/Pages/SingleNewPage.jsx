@@ -1,12 +1,16 @@
-import React from "react";
-import { Facebook, Share, Tweeter } from "../Components/Icons";
-
+import React, { useState } from "react";
+import { Facebook, Share, Tweeter } from "../Components/Icons"
+import  TopHeadlines from "../Mocks/TopHeadlines.json"
 export const SingleNewPage = () => {
+
+
+  const [single, setsingle] = useState(TopHeadlines.articles[0])
+
   return (
     <div>
       <div className="container-fluid m-0 pb-0  ">
-        <div className="row  ps-4 pt-5 pb-0 m-0 gy-5 justify-content-between ">
-          <div className="col-4 d-flex ps-2 pb-0  mb-0">
+        <div className="row  ps-4 pt-5 pb-0 m-0 gy-5 flex-column flex-md-row justify-content-between ">
+          <div className="col-12 col-md-8 d-flex justify-content-center justify-content-md-start  ps-0 ps-md-2 pb-0  mb-0 ">
             <button className="btn m-1 btn-sm btn-primary rounded-pill text-secondary">
               Geofa
             </button>
@@ -20,18 +24,17 @@ export const SingleNewPage = () => {
               Gea
             </button>
           </div>
-          <div className="col-2 d-flex justify-content-evenly align-items-center">
+          <div className="col-12 col-md-4 d-flex justify-content-evenly align-items-center">
             <Facebook />
             <Share />
             <Tweeter />
           </div>
-          <div className="col-12 p-3  ">
+          <div className="col-12 p-0 p-md-3  ">
             <h1
               className="display-4 text-primary"
               style={{ fontFamily: "Neue-Regular" }}
             >
-              White House reportedly blames auto-suggested iPhone contact for
-              Signal scandal
+            {single.title}
             </h1>
           </div>
         </div>
@@ -39,40 +42,41 @@ export const SingleNewPage = () => {
       <span className="separador"></span>
       <section className="container-fluid container-lg p-3">
         <div className="row justify-content-start">
-          <div className="col-6 d-flex">
-            <div className="d-flex flex-column justify-content-start m-3 p-0 text-primary">
-              <p className="m-0">Lorem, ipsum dolor.</p>
+          <div className="col-12 col-md-6 d-flex flex-column flex-md-row">
+            <div className="d-flex flex-md-column justify-content-around m-3 p-0 text-primary">
+              <p className="m-0">{single.source.name}</p>
               <h5>Lorem, ipsum.</h5>
             </div>
-            <div className="d-flex flex-column justify-content-start m-3 p-0 text-primary">
-              <p className="m-0">Lorem, ipsum dolor.</p>
+            <div className="d-flex flex-md-column justify-content-around m-3 p-0 text-primary">
+              <p className="m-0">{single.source.name}</p>
               <h5>Lorem, ipsum.</h5>
             </div>
           </div>
         </div>
-        <div className="row g-5">
+        <div className="row g-0 g-md-5">
           <div className="col-12 pt-2 col-md-6 border d-flex align-self-start justify-content-center p-5">
-            <img src=""
-             alt="" className="img-fluid w-100" />
+            <img src={single.image}
+             alt="" className="img-fluid w-100 rounded-3" />
           </div>
         
           <div className="col-12 col-md-6 pt-3 d-flex justify-content-center align-items-stretch border">
-            <p className="fs-5 text-primary p-4 p-md-0">      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora in blanditiis hic accusantium deserunt dolores laborum, ipsam minima, inventore tempore itaque nisi quisquam ut labore obcaecati doloribus deleniti adipisci distinctio molestias, voluptate explicabo nobis ipsa? Sunt, dolores itaque, ut sint aperiam aut nulla maxime, debitis suscipit at assumenda? Et ratione amet numquam debitis maxime ipsum voluptate fugit cupiditate nostrum quod laboriosam, odio, eum labore nulla doloremque. Eos facilis rem consectetur voluptatibus repellat in fugit eveniet, illo fuga praesentium voluptate sint, dolores suscipit et asperiores ea a eum aspernatur perspiciatis quia dolorum nam! Adipisci molestiae perferendis dignissimos pariatur. Fuga possimus saepe, natus qui exercitationem perferendis ipsam dolor alias reiciendis nemo reprehenderit quas eligendi quasi eum similique fugiat necessitatibus. Eius magni iure soluta quos exercitationem veniam, repellendus maiores, voluptates nulla, expedita harum corrupti architecto? Nisi architecto sequi nesciunt quod veritatis. Qui dicta odio quisquam perferendis aliquam neque sint corporis quaerat veritatis labore? Culpa quod reprehenderit at saepe dolores molestias possimus aperiam labore quidem expedita nihil aspernatur ut, sapiente eveniet? Quas accusamus saepe quod labore ex tempora, maxime explicabo veritatis quam vel ullam nihil expedita officia error eos porro magnam minus incidunt ipsa debitis quidem. Amet vitae, dolorem beatae accusamus doloribus nobis. Vitae?</p>
+            <p className="fs-5 text-primary p-4 p-md-0"> 
+              {single.content}
+              {single.content}
+              {single.content}
+              
+
+            </p>
 
           </div>
           <div className="col-12 d-flex justify-content-center py-4">
-            <h4 className="h4 text-primary fw-bold " style={{fontFamily:"Eiko"}}  >Lorem ipsum dolor sit, amet consectetur adipisicing.</h4>
+            <h4 className="h4 text-primary fw-bold " style={{fontFamily:"Eiko"}}  >{single.description}</h4>
           </div>
           <div className="col-12 col-lg-6 p-2">
             <div className="w-100 border d-flex flex-wrap justify-content-around  ">
-            <img src="src/assets/img/cuadro.png"
+            <img src={single.image}
              alt="" className="img-fluid" />
-             <img src="src/assets/img/cuadro.png"
-             alt="" className="img-fluid " />
-            <img src="src/assets/img/cuadro.png"
-             alt="" className="img-fluid" />
-             <img src="src/assets/img/cuadro.png"
-             alt="" className="img-fluid " />
+     
           </div>
           </div>
           <div className="col-12 col-lg-6 ">

@@ -1,10 +1,18 @@
-import React from "react";
+
+import { useState } from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 import { TopicCard } from "../Components/TopicCard";
 import { TrendyNowCard } from "../Components/TrendyNowCard";
+import  TopHeadlines from "../Mocks/TopHeadlines.json"
 
 export const HomePage = () => {
+
+ const [tops, settops] = useState(TopHeadlines.articles)
+
+
+
+
   return (
     <>
       <section className="container-fluid d-flex flex-column justify-content-center align-items-center ">
@@ -36,27 +44,28 @@ export const HomePage = () => {
           </h4>
         </div>
         <div className="row p-4  g-2 px-6 align-items-end ">
-          <div className="col-12 col-md-10 col-lg-6 d-flex align-content-end ">
-            <LatestNewsCard />
-          </div>
-          <div className="col-12 col-md-6 col-lg-3 mb-2 gx-0 p-2">
-            <OtherNewsCard />
-          </div>
-          <div className="col-12 col-md-6 col-lg-3 mb-2 gx-0 p-2">
-            <OtherNewsCard />
-          </div>
-          <div className="col-12 col-md-6 col-lg-3 mb-2 gx-0 p-2">
-            <OtherNewsCard />
-          </div>
-          <div className="col-12 col-md-6 col-lg-3 mb-2 gx-0 p-2">
-            <OtherNewsCard />
-          </div>
-          <div className="col-12 col-md-6 col-lg-3 mb-2 gx-0 p-2">
-            <OtherNewsCard />
-          </div>
-          <div className="col-12 col-md-6 col-lg-3 mb-2 gx-0 p-2">
-            <OtherNewsCard />
-          </div>
+         
+          {
+            tops && tops.map((article) => (
+              article === tops[0]? (<div className="col-12 col-md-10 col-lg-6 d-flex align-content-end" 
+              key={article.title}>
+                <LatestNewsCard
+                 title={article.title}
+                  date={article.publishedAt} 
+                  img={article.image} />
+              </div>) : ( 
+               <div className="col-12 col-md-6 col-lg-3 mb-2 gx-0 p-2">
+            <OtherNewsCard 
+              key={article.title}
+              title={article.title}
+              date={article.publishedAt}
+              img={article.image}/>
+             </div>)
+              
+            ))
+          }
+         
+         
         </div>
       </section>
       <span className="separador"></span>
@@ -91,7 +100,7 @@ export const HomePage = () => {
             className="h3 mb-4 text-primary"
             style={{ fontFamily: "Neue-Bold" }}
           >
-            LATEST NEWS
+            TRENDY NOW
           </h4>
         </div>
         <div className="row p-4">

@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const TopicCard = () => {
   return (
-    <>
+    <> <Link to={"/Topic"} style={{textDecoration:"none"}}>
       <div className="card card-topic p-1 border border-secondary rounded-4 ">
+       
         <div className="card-body d-flex flex-column justify-content-end">
           <div
             className="col-6 mb-2 t"
@@ -27,17 +29,18 @@ export const TopicCard = () => {
             className="card-title fs-6 text-secondary"
             style={{ fontFamily: "Neue-Medium" }}
           >
-            Exclusive Interview With HollyWood Actor Winning Award, Jean Luc
-            Godard and his wife
+              GADGETS
           </div>
           <h6
             class="card-subtitle text-secondary"
             style={{ fontFamily: "Neue-Light" }}
           >
-            Juli 23.2023
+            Last Update: 
           </h6>
         </div>
-      </div>
+     
+      </div>   
+      </Link>
     </>
   );
 };
