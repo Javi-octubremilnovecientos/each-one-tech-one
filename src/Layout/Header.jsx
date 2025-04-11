@@ -4,40 +4,85 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <>
-      <div className="container-fluid mt-4" id="header">
-        <div className="row mt-3 px-2 flex-column flex-lg-row ">
-          <div className="col-12 col-lg-10 d-flex justify-content-around bg-secondary rounded-pill p-2 m-2 m-lg-0 ">
-            <div className="row w-50  justify-content-around  ">
-              <div className="col-1 text-primary text-center"><Link to={"/"} style={{textDecoration:"none"}}>Home</Link></div>
-              <div className="col-3 text-primary text-nowrap text-center"><Link to={"/topic"} style={{textDecoration:"none"}}>App´s & Software</Link></div>
-              <div className="col-2 text-primary text-end"><Link to={"/topic"} style={{textDecoration:"none"}}>Smartphones</Link></div>
-              <div className="col-2 text-primary text-end"><Link to={"/topic"}  style={{textDecoration:"none"}}>Gadgets</Link></div>
-            </div>
-            <div className="row w-50  justify-content-around">
-              <div className="col-1 text-primary text-start"><Link to={"/topic"}  style={{textDecoration:"none"}}>A.I.</Link></div>
-              <div className="col-3 text-primary text-nowrap text-center">
-              <Link style={{textDecoration:"none"}}>Politics & Regulation</Link>
-              </div>
-              <div className="col-3 text-primary text-nowrap text-end"><Link to={"/Rapshody"}  style={{textDecoration:"none"}}>Tech Rapshody</Link></div>
-              <div className="col-2 text-primary text-end"><Link to={"/subscribe"} style={{textDecoration:"none"}}>Subscribe</Link></div>
-              <div className="col-2 text-primary text-end"><Link  to={"/Contact"} style={{textDecoration:"none"}}>Contact</Link></div>
-            </div>
-          </div>
-          <div className="col-12 col-md-2 bg-secondary rounded-pill ms-2 ms-lg-0 p-1">
-            <SearchIcon />
-          </div>
+    <nav className="navbar navbar-expand-lg ">
+      <div className="container-fluid ">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded=""
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary rounded-pill p-1 ">
+            <li className="nav-item">
+              <a className="nav-link text-primary " aria-current="page" href="#">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                App's & Software
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link " aria-current="page" href="#">
+                Smartphones
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Gadgets
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link " aria-current="page" href="#">
+                A.I.
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Politices & Regulation
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Tech Rapshody
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+               Newsletter
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+               Contact
+              </a>
+            </li>
+          </ul>
+         
+          <form className="d-flex  bg-secondary rounded-pill mt-lg-2  " role="search">
+            <button className="btn text-primary" type="submit">
+              <SearchIcon/>
+           </button>
+            <input
+              className="form-control "
+              type="search"
+              placeholder=""
+              aria-label="Search"
+            />
+          </form>
+        
         </div>
+   
       </div>
 
-      <div className="container-fluid mt-3 " id="mob">
-        <div className="col-2   d-flex flex-column justify-content-center align-items-start  ms-2">
-          <div className="w-50 border-top border-primary border-5 mt-3"></div>
-          <div className="w-100 border-top border-primary border-5 mt-2"></div>
-          <div className="w-50 border-top border-primary border-5 mt-2"></div>
-          <div className="w-100 border-top border-primary border-5 mt-2"></div>
-        </div>
-      </div>
-    </>
+    </nav>
   );
 };

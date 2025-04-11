@@ -10,29 +10,9 @@ export const HomePage = () => {
 
  const [tops, settops] = useState(TopHeadlines.articles)
 
-
-
-
-  return (
+return (
     <>
-      <section className="container-fluid d-flex flex-column justify-content-center align-items-center ">
-        <div className="row">
-          <div className="col-12 d-flex flex-column justify-content-center align-items-center">
-            <h1 className="text-start text-primary display-1">
-              <span style={{ fontFamily: "Eiko" }}>Each </span> One <br />
-              Tech<span style={{ fontFamily: "Eiko" }}> One</span>
-            </h1>
-            <h3
-              className="text-primary text-center"
-              style={{ fontFamily: "Neue-Medium" }}
-            >
-              Tech knowledge
-              <br />
-              Hub
-            </h3>
-          </div>
-        </div>
-      </section>
+      <section></section>
       <span className="separador"></span>
       <section className="container-fluid pb-4 p-1 p-sm-4">
         <div className="row ps-4 pt-3 display-5 ">
