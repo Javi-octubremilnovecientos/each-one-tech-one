@@ -12,7 +12,16 @@ export const HomePage = () => {
 
 return (
     <>
-      <section></section>
+      <section className="container-fluid pb-4 p-1 p-sm-4 d-flex justify-content-center align-items-center">
+        <div className="row">  
+          <div className="col-12"> 
+             <h1 className="h1 display-1 fw-normal"><span className="alt-font">Each</span> One <br /> Tech <span className="alt-font">One</span></h1>
+             <h5 className="text-center fw-bolder">Latest News about technology <br/> & trendy new releases</h5>
+          </div>
+        
+          </div>
+      
+      </section>
       <span className="separador"></span>
       <section className="container-fluid pb-4 p-1 p-sm-4">
         <div className="row ps-4 pt-3 display-5 ">

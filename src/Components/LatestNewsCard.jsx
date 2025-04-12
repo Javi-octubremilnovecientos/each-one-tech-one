@@ -9,7 +9,7 @@ export const LatestNewsCard = ({title,date,img}) => {
     <article>
       <Link to={"/single"}>
       <div className="card card-first bg-primary text-secondary rounded-4 d-flex  p-2">
-        <div className="col-6 mt-3 mb-0 ms-3 " style={{ fontFamily: "Neue-Light" }}>
+        <div className="col-6 mt-3 mb-0 ms-3 ">
           <a
             href="#"
             className="btn btn-sm border border-secondary text-secondary rounded-pill me-2 "
@@ -26,13 +26,13 @@ export const LatestNewsCard = ({title,date,img}) => {
         <div className="card-body ">
           <h5
             className="card-title mb-2"
-            style={{ fontFamily: "Neue-Medium" }}
+          
           >
            {title}
           </h5>
           <h6
             className="card-subtitle mb-4"
-            style={{ fontFamily: "Neue-Light" }}
+           
           >
           {date}
           </h6>

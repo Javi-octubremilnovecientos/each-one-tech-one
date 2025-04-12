@@ -8,7 +8,7 @@ export const ContactPage = () => {
     <section className='container-fluid py-3 '>
       <div className="row justify-content-center">
       <div className="col-12 p-2 mt-3 ps-3 ms-5">
-        <h1 className='h1 display-1 text-primary' style={{fontFamily:"Neue-Bold"}}>Contact Us</h1>
+        <h1 className='h1 display-1 fw-bolder text-primary'>Contact Us</h1>
         </div>
       <div className="col-12 m-4 p-5 ">
         <img  className="img-fluid  rounded-4" src={fondoFinal} alt="" style={{aspectRatio:"3/1", objectFit:"cover"}}/>

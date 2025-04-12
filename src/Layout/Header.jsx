@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
-      <div className="container-fluid ">
+      <div className="container-fluid  ">
         <button
           className="navbar-toggler"
           type="button"
@@ -17,60 +17,70 @@ export const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className="collapse navbar-collapse flex-column flex-xxl-row align-items-start"
+          id="navbarSupportedContent"
+        >
           <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary rounded-pill p-1 ">
             <li className="nav-item">
-              <a className="nav-link text-primary " aria-current="page" href="#">
-                Home
+              <a
+                className="nav-link text-primary "
+                aria-current="page"
+                href="#"
+              >
+                <Link to={"/"}>Home</Link>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                App's & Software
+                <Link to={"/Topic"}>App's & Software</Link>
               </a>
             </li>
 
             <li className="nav-item">
               <a className="nav-link " aria-current="page" href="#">
-                Smartphones
+                <Link to={"/Topic"}>Smartphones</Link>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Gadgets
+                <Link to={"/Topic"}> Gadgets </Link>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link " aria-current="page" href="#">
-                A.I.
+                <Link to={"/Topic"}> A.I. </Link>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Politices & Regulation
+                <Link to={"/Topic"}> Politics & Regulation</Link>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Tech Rapshody
+                <Link to={"/Rapshody"}> Tech Rapshody </Link>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-               Newsletter
+                <Link to={"/subscribe"}> Newsletter </Link>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-               Contact
+                <Link to={"/Contact"}> Contact </Link>
               </a>
             </li>
           </ul>
-         
-          <form className="d-flex  bg-secondary rounded-pill mt-lg-2  " role="search">
+
+          <form
+            className="d-flex  bg-secondary rounded-pill mt-lg-2 py-1  "
+            role="search"
+          >
             <button className="btn text-primary" type="submit">
-              <SearchIcon/>
-           </button>
+              <SearchIcon />
+            </button>
             <input
               className="form-control "
               type="search"
@@ -78,11 +88,8 @@ export const Header = () => {
               aria-label="Search"
             />
           </form>
-        
         </div>
-   
       </div>
-
     </nav>
   );
 };

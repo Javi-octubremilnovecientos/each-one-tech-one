@@ -55,9 +55,7 @@ section {
   min-height: 80vh;
 
 }
-#mob{
-  display: none;
-}
+
 .separador{
   display: block;
   position: relative;
@@ -93,18 +91,4 @@ section {
   background-color: #0a297e28;
 }
 
-@media screen and (max-width:1300px){
 
-
-
-}
-@media screen and (max-width:800px){
-  #header{
-    display: none;
-  }
-
-  #mob{
-    display: flex;
-  }
-  
-}

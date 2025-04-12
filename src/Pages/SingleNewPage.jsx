@@ -31,8 +31,8 @@ export const SingleNewPage = () => {
           </div>
           <div className="col-12 p-0 p-md-3  ">
             <h1
-              className="display-4 text-primary"
-              style={{ fontFamily: "Neue-Regular" }}
+              className="display-4 text-primary fw-light"
+            
             >
             {single.title}
             </h1>

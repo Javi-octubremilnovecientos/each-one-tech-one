@@ -7,12 +7,12 @@ export const SubscribePage = () => {
         <div className="row  p-4 gy-4">
           <div className="col-12 p-4 d-flex justify-content-center">
             <h1
-              className="h1 text-primary display-1 d-flex flex-column  align-items-start p-2"
-              style={{ fontFamily: "Neue-Bold" }}
+              className="h1 fw-bolder text-primary display-1 d-flex flex-column  align-items-start p-2"
+            
             >
               Subscribe <br />
               now to
-              <span className="" style={{ fontFamily: "Eiko"}}>
+              <span className="alt-font">
                 Newsletter
               </span>
             </h1>
