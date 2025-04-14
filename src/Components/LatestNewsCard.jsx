@@ -2,14 +2,14 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 export const LatestNewsCard = ({ noticia }) => {
-  console.log(noticia);
+  
   return (
     <article className="">
       <Link to={"/single"}>
         <div className="card card-first bg-primary text-secondary rounded-4 d-flex  p-2">
           <div className="col-6 mt-3 mb-0 ms-3 ">
-            <a className="text-secondary" href="#"></a>
-            <a className="text-secondary" href="#"></a>
+            <a className="btn text-secondary" ></a>
+            <a className="btn text-secondary"> </a>
           </div>
           <div className="card-body ">
             <h3 className="card-title truncate-after-second-line mb-2 text-secondary">

@@ -23,54 +23,54 @@ export const Header = () => {
         >
           <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary rounded-pill p-1 ">
             <li className="nav-item">
-              <a
+              <div
                 className="nav-link "
                 aria-current="page"
                 href="#"
               >
                 <Link to={"/"}>Home</Link>
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div className="nav-link" href="#">
                 <Link to={"/Topic"}>App's & Software</Link>
-              </a>
+              </div>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link " aria-current="page" href="#">
+              <div className="nav-link " aria-current="page" href="#">
                 <Link to={"/Topic"}>Smartphones</Link>
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div className="nav-link" href="#">
                 <Link to={"/Topic"}> Gadgets </Link>
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link " aria-current="page" href="#">
+              <div className="nav-link " aria-current="page" href="#">
                 <Link to={"/Topic"}> A.I. </Link>
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div className="nav-link" href="#">
                 <Link to={"/Topic"}> Politics & Regulation</Link>
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div className="nav-link" href="#">
                 <Link to={"/Rapshody"}> Tech Rapshody </Link>
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div className="nav-link" href="#">
                 <Link to={"/subscribe"}> Newsletter </Link>
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div className="nav-link" href="#">
                 <Link to={"/Contact"}> Contact </Link>
-              </a>
+              </div>
             </li>
           </ul>
 
