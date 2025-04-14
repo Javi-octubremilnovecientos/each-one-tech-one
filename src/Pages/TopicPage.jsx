@@ -8,7 +8,7 @@ export const TopicPage = () => {
     <div className="container-fluid m-0 pb-0  ">
       <div className="row  ps-4 pt-5 pb-0 m-0 gy-1 border"> 
         <div className="col-12 p-3  ">
-          <h1 className='display-1 text-primary' style={{fontFamily:"Neue-Bold"}}>Arts</h1>
+          <h1 className='h1 display-2'>Arts</h1>
         </div>
         <div className="col-12 d-flex ps-2 pb-0 border  mb-0">
           <button className='btn m-1 btn-md border border-2 border-primary rounded-pill text-primary'>Geofa</button>

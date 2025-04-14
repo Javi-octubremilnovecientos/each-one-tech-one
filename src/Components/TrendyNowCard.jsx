@@ -4,17 +4,20 @@ import { Link } from "react-router-dom";
 export const TrendyNowCard = () => {
   return (
     <article>
-    <Link to={"/single"} >
-    <div className="row card-trendy w-100 rounded-4">
-      <div className="col-12 col-md-2 p-3">
-        <p className="fs-6 text-primary" >May, 13 2023</p>
-      </div>
-      <div className="col-12 col-md-10 p-3">
-      <p className="fs-2  text-primary " >Madev Wdj0af vivhr9u8 rhibetuibhtebuih</p>
-      </div>
-      
+    <div className="card mb-3 bg-secondary border p-4">
+  <div className="row g-0">
+    <div className="col-md-2">
+    <p className="lead fs-4">esas cositas</p>
     </div>
-    </Link>
+    <div className="col-md-10">
+      <div className="card-body">
+        <h3 className="card-title ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veritatis eligendi vero reprehenderit, distinctio id dolores nemo quas eius modi!</h3>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
     </article>
     
   );

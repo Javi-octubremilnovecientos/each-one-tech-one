@@ -1,46 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import jeanLuc from "../assets/img/jeanLuc.jpg";
 
 export const TopicCard = () => {
   return (
-    <> <Link to={"/Topic"}>
-      <div className="card card-topic p-1 border border-secondary rounded-4 ">
-       
-        <div className="card-body d-flex flex-column justify-content-end">
-          <div
-            className="col-6 mb-2 t"
-            style={{ fontFamily: "Neue-Light" }}
-          >
-            <a
-              href="#"
-              className="btn border border-secondary text-secondary rounded-pill p-1 me-2 "
-            >
-              Interviwes
-            </a>
-            <a
-              href="#"
-              className="btn border border-secondary  text-secondary rounded-pill p-1"
-            >
-              {" "}
-              artist
-            </a>
-          </div>
-          <div
-            className="card-title fs-6 text-secondary"
-            
-          >
-              GADGETS
-          </div>
-          <h6
-            class="card-subtitle text-secondary"
-           
-          >
-            Last Update: 
-          </h6>
+    <article>
+      <div
+        className="card position-relative rounded-4"
+        style={{ minHeight: "500px" }}
+      >
+        <img
+          src={jeanLuc}
+          className="img-fluid position-absolute h-100 object-fit-cover rounded-4"
+          alt=""
+        />
+        <div className="card-img-overlay d-flex flex-column justify-content-end">
+          <h4 className="h4 card-title fw-bold text-secondary ">SMATPHOBES</h4>
+
+          <p className="card-subtitle  text-secondary ">
+            Last updated 3 mins ago
+          </p>
         </div>
-     
-      </div>   
-      </Link>
-    </>
+      </div>
+    </article>
   );
 };

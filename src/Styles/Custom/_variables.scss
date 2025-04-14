@@ -45,27 +45,54 @@
     font-display: swap;
   }
   
-// colores globales
+  // colores globales
   $primary: #0A287E;
   $secondary: #f3f3e9;
 
 //global Fonts
-$font-family-sans-serif: 'Neue-Medium', sans-serif;
-$body-color: $primary;
+$font-family-base:"Neue-Medium", sans-serif;
+$font-size-base: 1.1rem;
+$body-color:$primary;
+
 $alt-font: "Eiko", sans-serif;
 $alt-font-bold: "Eiko-Heavy", sans-serif;
 $alt-font-thin: "Eiko-Thin", sans-serif;
 
-$display-font-sizes: (
-  1: 7rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
-);
+
+$lead-font-size: 1rem  ;
+
+
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-weight-bold: 900;
+
+//headings
+
+$headings-color:$primary;
+$h1-font-size: 3.7rem;
+$h2-font-size: 2.4rem;
+$h3-font-size: 2rem;
+$h3-font-weight: 100;
+$h4-font-size: 1.3rem;
+
+$display-font-size-1: 8rem;
+$display-font-size-2: 7rem;
+$display-font-size-3: 3rem;
+$display-font-weight-1:600;
+$display-font-weight-2:1000;
+$display-font-weight-3:800;
+
+
+
+
+
+
+
+
 // Inputs
-$input-font-family:$font-family-sans-serif ;
+
 $input-font-size: 0.9rem ;
 $input-bg: $secondary ;
 $input-padding-y:0.61rem;
@@ -75,11 +102,11 @@ $input-focus-box-shadow:none;
 
 // main Navbar
 
-$nav-link-font-size: 1.1rem;
+// $nav-link-font-size: ;
 $navbar-light-toggler-border-color: none;
-$navbar-light-hover-color: $primary;
+// $navbar-light-hover-color: $primary;
 $navbar-nav-link-padding-x: 1.5rem;
-$navbar-toggler-font-size: 3.2rem;
+
 $navbar-toggler-transition: none ;
 $navbar-toggler-focus-width: 0px;
 
@@ -87,53 +114,8 @@ $navbar-toggler-focus-width: 0px;
 
 $link-decoration: none;            
 $link-hover-decoration: none;
-$link-hover-color:$primary;
-
-@import 'bootstrap/scss/bootstrap';
-
-.alt-font{
-  font-family:$alt-font, sans-serif;
-}
-.alt-font-bold{
-  font-family:$alt-font-bold, sans-serif;
-}
-.alt-font-thin{
-  font-family:$alt-font-thin, sans-serif;
-}
+// $link-hover-color:$primary;
 
 
-@media screen and (max-width:1500px){
 
-  .nav-item .nav-link{
-    font-size: 0.9rem;
-    padding:3 ;
-    text-wrap: nowrap;
-  }
-
-  
-  }
-@media screen and (max-width:1200px){
-
-  .nav-item .nav-link{
-    font-size: 0.89rem;
-    text-wrap: nowrap;
-  }
-}
-@media screen and (max-width:1100px){
-
-  .nav-item .nav-link{
-    font-size: 0.82rem;
-    text-wrap: nowrap;
-  }
-}
-@media screen and (max-width:1120px){
-
-  .nav-item .nav-link{
-    font-size: 0.71rem;
-    text-wrap: nowrap;
-  }
-
-  
-  }
-  
 

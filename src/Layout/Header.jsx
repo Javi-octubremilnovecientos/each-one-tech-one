@@ -24,7 +24,7 @@ export const Header = () => {
           <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary rounded-pill p-1 ">
             <li className="nav-item">
               <a
-                className="nav-link text-primary "
+                className="nav-link "
                 aria-current="page"
                 href="#"
               >
