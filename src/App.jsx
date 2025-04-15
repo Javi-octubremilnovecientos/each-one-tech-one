@@ -6,6 +6,7 @@ import { SingleNewPage } from "./Pages/SingleNewPage";
 import { ContactPage } from "./Pages/ContactPage";
 import { TechRapsodyPage } from "./Pages/TechRapsodyPage";
 import { SubscribePage } from "./Pages/SubscribePage";
+import { SearchResults } from "./Pages/SearchResults";
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/subscribe" element={<SubscribePage/>} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/Rapshody" element={<TechRapsodyPage/>} />
+        <Route path="/search" element={<SearchResults/>} />
       </Routes>
 </>
   );

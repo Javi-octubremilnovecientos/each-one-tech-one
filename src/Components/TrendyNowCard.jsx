@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const TrendyNowCard = () => {
   return (
     <article>
-    <div className="card mb-3 bg-secondary border p-4">
+    <div className="card mb-3 bg-white border rounded p-4">
   <div className="row g-0">
     <div className="col-md-2">
     <p className="lead fs-4">esas cositas</p>

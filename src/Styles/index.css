@@ -4,18 +4,8 @@
   padding:0;
 }
 
-body {
 
-  background-image: linear-gradient(to top, #f3f3e9 74%, transparent),
-    url("../assets/img/fondoFinal.webp");
-  background-size: contain;
-  background-repeat: repeat-y;
 
-}
-section {
-  min-height: 80vh;
-
-}
 
 
 

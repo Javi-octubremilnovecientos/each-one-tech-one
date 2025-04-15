@@ -48,6 +48,8 @@
   // colores globales
   $primary: #0A287E;
   $secondary: #f3f3e9;
+  $white:#dadacd ;
+ $border-radius: 1rem;
 
 //global Fonts
 $font-family-base:"Neue-Medium", sans-serif;
@@ -83,6 +85,22 @@ $display-font-size-3: 3rem;
 $display-font-weight-1:600;
 $display-font-weight-2:1000;
 $display-font-weight-3:800;
+
+//botones
+
+ $btn-border-radius:50px;
+ $btn-border-width:1px;
+ $btn-padding-y:1px ; 
+ $btn-font-family: "Neue-Regular";
+
+ $btn-padding-y-sm: 0.7px;        
+$btn-padding-x-sm: 7px ;      
+$btn-font-size-sm: 0.8rem  ;
+$btn-border-radius-sm:20px;
+$btn-border-width-sm:1px;
+
+
+$gradient: linear-gradient(180deg, rgba(transparent, 0) 66%, rgba($secondary, .99));
 
 
 

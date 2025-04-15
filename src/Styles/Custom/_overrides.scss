@@ -62,9 +62,19 @@
   font-family: $alt-font-thin, sans-serif;
 }
 
-.card-img-overlay{
+
+body {
+ background-color: $secondary;
+  background-size: contain;
+ background-repeat: no-repeat;
+
 
 }
+section {
+  min-height: 80vh;
+
+}
+
 
 @media screen and (max-width: 1500px) {
   .nav-item .nav-link {
@@ -79,15 +89,42 @@
     text-wrap: nowrap;
   }
 }
-@media screen and (max-width: 1100px) {
-  .nav-item .nav-link {
-    font-size: 0.82rem;
-    text-wrap: nowrap;
-  }
-}
 @media screen and (max-width: 1120px) {
   .nav-item .nav-link {
     font-size: 0.71rem;
     text-wrap: nowrap;
   }
 }
+@media screen and (max-width: 1100px) {
+  .nav-item .nav-link {
+    font-size: 0.82rem;
+    text-wrap: nowrap;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .display-1{
+    font-size:4rem;
+    font-weight: $display-font-weight-1
+  }
+  .display-2{
+    font-size: 3rem;
+    font-weight: $display-font-weight-2
+  }
+  .display-3{
+    font-size: 2rem;
+    font-weight: $display-font-weight-3
+  }
+  h1{
+    font-size: 1.8rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+
+
+
+}
+

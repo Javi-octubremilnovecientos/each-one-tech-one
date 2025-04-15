@@ -10,51 +10,101 @@ export const HomePage = () => {
 
   return (
     <>
-      <section className="container-fluid pb-4 p-1 p-sm-4 d-flex justify-content-center align-items-center">
+      <section
+        className="container-fluid d-flex justify-content-center align-items-center bg-md-gradient"
+        id="hero"
+      >
         <div className="row p-2">
-          <div className="col-12"></div>
-          <h1 className="h1 display-1">Each One Teach One</h1>
+          <div className="col-12">
+            <h1 className="h1 display-1">
+              <span className="alt-font-thin ">Each</span> One <br />
+              Tech
+              <span className="alt-font-thin"> One</span>
+            </h1>
+            <h3 className="text-center">Where tech Meets</h3>
+          </div>
         </div>
       </section>
-      <h2 className="h2 display-3">LATEST NEWS</h2>
-      <section className="container-fluid pb-4 p-1 p-sm-4 ">
-        <div className="row align-items-end">
-          <div className="col-6">
-            <LatestNewsCard noticia={tops[0]}></LatestNewsCard>
+      <section
+        className="container-fluid pb-4 p-1 p-sm-4  bg-secondary  pb-4"
+        id="latest-news"
+      >
+        <div className="row p-4 mb-3">
+          <div className="col-12 py-2 border-top border-primary border-2">
+            <h2 className="h2 display-3">LATEST NEWS</h2>
           </div>
-          <div className="col-3">
-            {" "}
-            <OtherNewsCard noticia={tops[0]}></OtherNewsCard>
-          </div>
-          <div className="col-3 ">
-            {" "}
-            <TopicCard></TopicCard>
-          </div>
-          <div className="col-12">
-            <TrendyNowCard></TrendyNowCard>
-          </div>
+        </div>
+        <div className="row align-items-end px-3 gx-2 gy-5">
+          {tops &&
+            tops.map((noticia, index) =>
+              index === 0 ? (
+                <div className="col-12 col-lg-6">
+                  <LatestNewsCard noticia={noticia}></LatestNewsCard>
+                </div>
+              ) : (
+                <div className="col-12 col-md-4 col-lg-3">
+                  <OtherNewsCard noticia={noticia}></OtherNewsCard>
+                </div>
+              )
+            )}
         </div>
         <div className="row p-4  g-2 px-6 align-items-end "></div>
       </section>
 
-      <section className="container-fluid p-1 p-sm-4 mt-4">
-        <div className="row ps-4 pt-3 display-5"></div>
-      </section>
-
-      <section className="conteiner p-1 p-sm-4 pb-4">
-        <div className="row ps-4 pt-3 display-5"></div>
-      </section>
-
-      <section className="container-fluid p-2 p-sm-4">
-        <div className="row ps-1 p-sm-4 pt-3 display-5">
-          <h4
-            className="h3 mb-4 text-primary"
-            style={{ fontFamily: "Neue-Bold" }}
-          >
-            RAPSHODY
-          </h4>
+      <section
+        className="container-fluid p-1 p-sm-4 pb-4 bg-secondary"
+        id="topics"
+      >
+        <div className="row p-4 mb-3">
+          <div className="col-12 py-2 border-top border-primary border-2">
+            <h2 className="h2 display-3">ALL TOPICS</h2>
+          </div>
         </div>
-        <div className="row w-100  m-2 px-1 px-sm-3 g-2 gx-md-4">
+        <div className="row  align-items-end px-3 gx-3 gy-3 gy-md px-4 pb-5">
+          <div className="col-12  col-md-6  col-lg-3">
+            <TopicCard />
+          </div>
+          <div className="col-12  col-md-6  col-lg-3">
+            <TopicCard />
+          </div>
+          <div className="col-12  col-md-6  col-lg-3">
+            <TopicCard />
+          </div>
+          <div className="col-12  col-md-6  col-lg-3">
+            <TopicCard />
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="conteiner-fluid p-1 p-sm-4 pb-4 bg-secondary"
+        id="trendy"
+      >
+        <div className="row p-4 mb-3">
+          <div className="col-12 py-2 border-top border-primary border-2">
+            <h2 className="h2 display-3">TRENDY NOW</h2>
+          </div>
+        </div>
+        <div className="row p-3 px-md-5">
+          <TrendyNowCard />
+          <TrendyNowCard />
+          <TrendyNowCard />
+          <TrendyNowCard />
+          <TrendyNowCard />
+        </div>
+      </section>
+
+      <section
+        className="container-fluid p-1 p-sm-4 bg-secondary"
+        id="rapshody"
+      >
+        <div className="row p-4 mb-3">
+          <div className="col-12 py-2 border-top border-primary border-2">
+            <h2 className="h2 display-3">TECH RAPSODHY</h2>
+          </div>
+        </div>
+
+        <div className="row  align-items-end px-3">
           <div className="col-12 col-md-12 col-lg-8 ">
             <div className="row  mb-2">
               <div className="col-12  col-md-4 col-lg-3 my-4">
@@ -72,16 +122,14 @@ export const HomePage = () => {
                 <TopicCard />
               </div>
               <div className="col-12  col-md-4 col-lg-3 my-4">
-                {" "}
                 <TopicCard />
               </div>
               <div className="col-12  col-md-4 col-lg-3 my-4">
-                {" "}
                 <TopicCard />
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-12 col-lg-4 pb-3 my-4 ps-4  d-flex justify-content-center">
+          <div className="col-12 col-md-12 col-lg-4 pb-3 ">
             <TopicCard />
           </div>
         </div>

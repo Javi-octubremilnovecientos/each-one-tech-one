@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
+    <header>
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid  ">
         <button
@@ -21,7 +22,7 @@ export const Header = () => {
           className="collapse navbar-collapse flex-column flex-xxl-row align-items-start"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary rounded-pill p-1 ">
+          <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary border border-primary border-2 rounded-pill p-1 ">
             <li className="nav-item">
               <div
                 className="nav-link "
@@ -75,11 +76,12 @@ export const Header = () => {
           </ul>
 
           <form
-            className="d-flex  bg-secondary rounded-pill mt-lg-2 py-1  "
+            className="d-flex  bg-secondary rounded-pill mt-lg-2 py-1 border border-primary border-2"
             role="search"
           >
             <button className="btn text-primary" type="submit">
-              <SearchIcon />
+              <Link to={"/search"}>   <SearchIcon /></Link>
+           
             </button>
             <input
               className="form-control "
@@ -91,5 +93,6 @@ export const Header = () => {
         </div>
       </div>
     </nav>
+    </header>
   );
 };

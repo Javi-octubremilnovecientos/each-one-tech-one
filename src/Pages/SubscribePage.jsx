@@ -3,21 +3,16 @@ import React from "react";
 export const SubscribePage = () => {
   return (
     <main>
-      <section className="container-fluid border px-4">
+      <section className="container-fluid  px-4">
         <div className="row  p-4 gy-4">
           <div className="col-12 p-4 d-flex justify-content-center">
-            <h1
-              className="h1 fw-bolder text-primary display-1 d-flex flex-column  align-items-start p-2"
-            
-            >
+            <h1 className="h1 display-2 d-flex flex-column  align-items-start p-2">
               Subscribe <br />
               now to
-              <span className="alt-font">
-                Newsletter
-              </span>
+              <span className="alt-font">Newsletter</span>
             </h1>
           </div>
-          <div className="col-12 text-primary fs-4">
+          <div className="col-12 text-primary fs-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
             reiciendis ut. Commodi, nobis iste! Sit aut commodi, delectus
             sapiente voluptatibus corrupti officia sint et debitis eveniet
