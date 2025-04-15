@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Facebook, Share, Tweeter } from "../Components/Icons"
-import  TopHeadlines from "../Mocks/TopHeadlines.json"
+import useSearchStore from "../Store/useSearchStore";
+// import  TopHeadlines from "../Mocks/TopHeadlines.json"
 export const SingleNewPage = () => {
+  
+  const {singleNew} = useSearchStore()
 
-
-  const [single, setsingle] = useState(TopHeadlines.articles[0])
+  // const [single, setsingle] = useState(TopHeadlines.articles[0])
 
 
 
@@ -23,7 +25,9 @@ export const SingleNewPage = () => {
           <div className=" col-12 p-0 p-md-3  ">
             <h1
               className="h1  text-warp">
-               {single.title}
+             { singleNew?  singleNew.titulo : ""
+
+             }
             </h1>
           </div>
         </div>
@@ -44,25 +48,23 @@ export const SingleNewPage = () => {
         </div>
         <div className="row g-0 g-md-5">
           <div className="col-12 pt-2 col-md-6 border d-flex align-self-start justify-content-center p-5">
-            <img src={single.image}
+            <img src={singleNew.imagen}
              alt="" className="img-fluid w-100 rounded" />
           </div>
         
           <div className="col-12 col-md-6 px-3 px-md-3 pt-3 d-flex justify-content-center align-items-stretch border">
             <p className=""> 
-              {single.content}
-              {single.content}
-              {single.content}
+              {singleNew? singleNew.contenido : ""}
+            
              </p>
 
           </div>
           <div className="col-12 d-flex justify-content-center py-4 px-3">
-            <h4 className="alt-font text-primary fw-bold " >{single.description}</h4>
+            <h4 className="alt-font text-primary fw-bold " >{singleNew?.descripcion}</h4>
           </div>
           <div className="col-12 col-lg-6 p-2">
             <div className="w-100 px-4 border d-flex flex-wrap justify-content-around  ">
-            <img src={single.image} 
-             alt="" className="img-fluid " />
+          
      
           </div>
           </div>

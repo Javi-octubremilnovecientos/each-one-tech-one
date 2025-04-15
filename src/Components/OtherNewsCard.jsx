@@ -1,19 +1,22 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import useSearchStore from "../Store/useSearchStore";
 export const OtherNewsCard = ({noticia}) => {
+
+  const {SingleNew} = useSearchStore()
   return (
-    <article>
+    <article onClick={()=>SingleNew(noticia)}>
       <Link to={"/single"} className="text-decoration-none">
         <div className=" card p-2  bg-secondary border border-secondary ">
           <div className="col-12 border border-dark mb-3"></div>
           <div className="col-6 d-flex ms-1 ">
-            <a className="btn btn-sm btn-primary">
+            <button className="btn btn-sm btn-primary">
               Interviwes
-            </a>
-            <a className="btn btn-sm btn-outline-primary ms-1">
+            </button>
+            <button className="btn btn-sm btn-outline-primary ms-1">
               artist
-            </a>
+            </button>
           </div>
           <div className="card-body pt-1 ">
             <h4 className="card-title  truncate-after-second-line pt-1">

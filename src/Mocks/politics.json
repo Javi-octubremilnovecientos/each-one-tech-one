@@ -49,18 +49,7 @@
                 "url": "https://www.theguardian.com"
             }
         },
-        {
-            "title": "What’s more vacuous than an endless vacuum? It’s Lauren Sanchez and Katy Perry’s party in space",
-            "description": "The all-female Blue Origin flight on Monday broke boundaries and set records in the spouting of girlboss gibberish, says Guardian columnist Marina Hyde",
-            "content": "Well, I watched every second of the buildup, flight and aftermath of the first Blue Origin all-female space trip. You’ve heard of one small step for man? This was one giant leap backwards for womankind. I’m kidding, I’m kidding! What could be more em... [5508 chars]",
-            "url": "https://www.theguardian.com/commentisfree/2025/apr/15/lauren-sanchez-katy-perry-space-blue-origin-female-flight",
-            "image": "https://i.guim.co.uk/img/media/c98b5a30fee20c68525147e5bab942b33d92954e/0_175_5712_3427/master/5712.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctb3BpbmlvbnMucG5n&enable=upscale&s=2678789eb1ba8dea10331b6f74cbe7b7",
-            "publishedAt": "2025-04-15T08:29:45Z",
-            "source": {
-                "name": "The Guardian",
-                "url": "https://www.theguardian.com"
-            }
-        },
+   
         {
             "title": "Drivers warned as key item to be banned from June",
             "description": "Concerns change in the law could have an impact on drivers",
@@ -86,17 +75,18 @@
             }
         },
         {
-            "title": "Want lower blood pressure? Pass the bananas, not the salt",
-            "description": "Research shows that dietary potassium plays a vital role in blood pressure regulation, emphasizing the need for a balanced intake of sodium and potassium.",
-            "content": "Most of us have heard the advice: “Cut back on salt if you have high blood pressure.” But what if the solution isn’t just about eating less sodium, but also about eating more potassium?\nStudy: Modulation of blood pressure by dietary potassium and sod... [4373 chars]",
-            "url": "https://www.news-medical.net/news/20250415/Want-lower-blood-pressure-Pass-the-bananas-not-the-salt.aspx",
-            "image": "https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_807431_17447041720905820.jpg",
-            "publishedAt": "2025-04-15T08:10:00Z",
+            "title": "Future legislation compensating news outlets for content must account for AI: report",
+            "description": "TORONTO — Canadian researchers say any future legislation meant to level the playing field between Big Tech and journalism organizations must account for generative artificial intelligence.",
+            "content": "TORONTO — Canadian researchers say any future legislation meant to level the playing field between Big Tech and journalism organizations must account for generative artificial intelligence.\nThe experts behind a new report analyzing Canada’s Online Ne... [1142 chars]",
+            "url": "https://www.bradfordtoday.ca/national-business/future-legislation-compensating-news-outlets-for-content-must-account-for-ai-report-10517268",
+            "image": "https://www.vmcdn.ca/f/files/shared/feeds/cp/2025/04/2ae867f58988801bd81c2a5189f9968c05da70608ebc224b44e2d6568ea9b0ef.jpg;w=1200;h=800;mode=crop",
+            "publishedAt": "2025-04-13T14:11:55Z",
             "source": {
-                "name": "News-Medical.net",
-                "url": "https://www.news-medical.net"
+                "name": "BradfordToday",
+                "url": "https://www.bradfordtoday.ca"
             }
         },
+  
         {
             "title": "Drivers face £40 fine while stuck in stationary traffic with only a 'few' exceptions",
             "description": "Under the Engine Idling Law, which forms part of Rule 123 of the Highway Code, drivers must not leave a vehicle's engine running unnecessarily while stationary on a public road.",
