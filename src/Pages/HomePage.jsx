@@ -1,14 +1,13 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 import { TopicCard } from "../Components/TopicCard";
 import { TrendyNowCard } from "../Components/TrendyNowCard";
 import TopHeadlines from "../Mocks/TopHeadlines.json";
-
+import { RandomNumb } from "../Services/randomNumb";
 
 export const HomePage = () => {
-  // const [tops, settops] = useState(TopHeadlines.articles);
-
+  const [tops, settops] = useState(TopHeadlines.articles);
 
   return (
     <>
@@ -26,7 +25,6 @@ export const HomePage = () => {
             <h3 className="text-center">Where tech Meets</h3>
           </div>
         </div>
-        <button className="btn btn-primary">get news</button>
       </section>
       <section
         className="container-fluid pb-4 p-1 p-sm-4  bg-secondary  pb-4"
@@ -38,18 +36,20 @@ export const HomePage = () => {
           </div>
         </div>
         <div className="row align-items-end px-3 gx-2 gy-5">
-          {/* {tops &&
-            tops.map((noticia, index) =>
-              index === 0 ? (
+          {tops &&
+            tops.map((noticia, index) => {
+              const value = RandomNumb();
+              console.log(value)
+              return index === 0 ? (
                 <div className="col-12 col-lg-6">
-                  <LatestNewsCard key={noticia.title} noticia={noticia}/>
+                  <LatestNewsCard key={value} noticia={noticia} />
                 </div>
               ) : (
                 <div className="col-12 col-md-4 col-lg-3">
-                  <OtherNewsCard key={noticia.title} noticia={noticia}/>
+                  <OtherNewsCard key={value} noticia={noticia} />
                 </div>
-              )
-            )} */}
+              );
+            })}
         </div>
         <div className="row p-4  g-2 px-6 align-items-end "></div>
       </section>
@@ -65,7 +65,7 @@ export const HomePage = () => {
         </div>
         <div className="row  align-items-end px-3 gx-3 gy-3 gy-md px-4 pb-5">
           <div className="col-12  col-md-6  col-lg-3">
-            <TopicCard  />
+            <TopicCard />
           </div>
           <div className="col-12  col-md-6  col-lg-3">
             <TopicCard />

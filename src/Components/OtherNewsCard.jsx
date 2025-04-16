@@ -5,6 +5,8 @@ import useSearchStore from "../Store/useSearchStore";
 export const OtherNewsCard = ({noticia}) => {
 
   const {SingleNew} = useSearchStore()
+  const fechaRaw = new Date(noticia.publishedAt)
+  const fechaDef = fechaRaw.toDateString()
   return (
     <article onClick={()=>SingleNew(noticia)}>
       <Link to={"/single"} className="text-decoration-none">
@@ -23,7 +25,7 @@ export const OtherNewsCard = ({noticia}) => {
             {noticia.title}
             </h4>
             <p className="card-subtitle lead text-primary mb-3 ">
-              {noticia.publishedAt}
+              {fechaDef}
             </p>
           </div>
          <div className="ratio ratio-4x3">

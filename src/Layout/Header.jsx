@@ -1,16 +1,16 @@
 import React from "react";
 import { SearchIcon } from "../Components/Icons";
 import { Link } from "react-router-dom";
-import useSearchStore from "../Store/useSearchStore";
+// import useSearchStore from "../Store/useSearchStore";
 
 export const Header = () => {
 
-  const {setSearchCell} = useSearchStore()
+  // const {setSearchCell} = useSearchStore()
 
-  const handleSearchApp = async ()=>{
+  // const handleSearchApp = async ()=>{
   
-   await setSearchCell()
-  }
+  //  await setSearchCell()
+  // }
 
   return (
     <header>
@@ -48,7 +48,7 @@ export const Header = () => {
             </li>
 
             <li className="nav-item">
-              <div className="nav-link " aria-current="page" href="#"  onClick={handleSearchApp}>
+              <div className="nav-link " aria-current="page" href="#"  >
                 <Link to={"/Topic"}>Smartphones</Link>
               </div>
             </li>
