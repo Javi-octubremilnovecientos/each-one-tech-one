@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
-// import useSearchStore from "../Store/useSearchStore";
-import SmartPhones from "../Mocks/SmartPhones.json";
-import { RandomNumb } from "../Hooks/randomNumb";
+import useSearchStore from "../Store/useSearchStore";
+// import SmartPhones from "../Mocks/SmartPhones.json";
+
 import { useFilterStore } from "../Store/useFilterStore";
 
 export const TopicPage = () => {
-  const [news, setnews] = useState(SmartPhones.articles);
-  const { yesterdayNews, lastWeekNews,resetFilter, filtredNews } = useFilterStore();
+  // const [news, setnews] = useState(SmartPhones.articles);
+  const {news} = useSearchStore()
+  const { yesterdayNews, lastWeekNews,resetFilter, filtredNews } = 
+  
+  useFilterStore();
 
   return (
     <>
@@ -50,27 +53,27 @@ export const TopicPage = () => {
         <div className="row p-2 py-4  gy-0  border-top border-primary border-2 align-items-end ">
           {filtredNews ? (
             filtredNews.map((New, index) => {
-              const value = RandomNumb();
+            
               return index === 0 ? (
                 <div className="col-12 col-md-6 py-3">
-                  <LatestNewsCard noticia={New} key={value} />
+                  <LatestNewsCard key={New.id} noticia={New} />
                 </div>
               ) : (
                 <div className="col-12 col-md-3 mb-2 p-3">
-                  <OtherNewsCard noticia={New} key={value} />
+                  <OtherNewsCard   key={New.id} noticia={New} />
                 </div>
               );
             })
           ) : news ? (
             news.map((New, index) => {
-              const value = RandomNumb();
+             
               return index === 0 ? (
                 <div className="col-12 col-md-6 py-3">
-                  <LatestNewsCard noticia={New} key={value} />
+                  <LatestNewsCard   key={New.id} noticia={New}  />
                 </div>
               ) : (
                 <div className="col-12 col-md-3 mb-2 p-3">
-                  <OtherNewsCard noticia={New} key={value} />
+                  <OtherNewsCard   key={New.id} noticia={New}  />
                 </div>
               );
             })

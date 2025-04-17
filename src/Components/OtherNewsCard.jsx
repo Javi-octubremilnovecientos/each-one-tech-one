@@ -5,7 +5,7 @@ import useSearchStore from "../Store/useSearchStore";
 export const OtherNewsCard = ({noticia}) => {
 
   const {SingleNew} = useSearchStore()
-  const fechaRaw = new Date(noticia.publishedAt)
+  const fechaRaw = new Date(noticia.fecha)
   const fechaDef = fechaRaw.toDateString()
   return (
     <article onClick={()=>SingleNew(noticia)}>
@@ -22,7 +22,7 @@ export const OtherNewsCard = ({noticia}) => {
           </div>
           <div className="card-body pt-1 ">
             <h4 className="card-title  truncate-after-second-line pt-1">
-            {noticia.title}
+            {noticia.titulo}
             </h4>
             <p className="card-subtitle lead text-primary mb-3 ">
               {fechaDef}
@@ -30,7 +30,7 @@ export const OtherNewsCard = ({noticia}) => {
           </div>
          <div className="ratio ratio-4x3">
           <img className="card-img object-fit-cover " alt="" 
-          src={noticia.image}
+          src={noticia.img}
            />
           </div>
         </div>

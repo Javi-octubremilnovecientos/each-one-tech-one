@@ -1,6 +1,7 @@
-import React from "react";
+
 import { create } from "zustand";
-import { SearchFetch } from "../Services/searchFetch";
+import { newsFetch } from "../Services/api";
+import { mapNews } from "../Utils/mapNews";
 
 const useSearchStore = create((set) => ({
   news: null,
@@ -12,10 +13,10 @@ const useSearchStore = create((set) => ({
     const params = "app OR software OR microsoft OR Aple OR develop";
 
     try {
-      const noticias = await SearchFetch(params);
-
+      const noticias = await newsFetch(params);
+       const results = mapNews(noticias)
       set({
-        news: noticias,
+        news: results,
         loading: false,
         error: false,
       });
@@ -26,65 +27,65 @@ const useSearchStore = create((set) => ({
       });
     }
   },
-  setSearchCell: async () => {
-    const params = "iphone OR xiaomi OR honor OR huawei";
+//   setSearchCell: async () => {
+//     const params = "iphone OR xiaomi OR honor OR huawei";
 
-    try {
-      const noticias = await SearchFetch(params);
-      set({
-        news: noticias,
-        loading: false,
-      });
-    } catch {
-      set({
-        error: true,
-      });
-    }
-  },
-  setSearchGadg: async () => {
-    const { fetchNews } = SearchFetch();
-    const params = "gadget OR review OR release";
+//     try {
+//       const noticias = await SearchFetch(params);
+//       set({
+//         news: noticias,
+//         loading: false,
+//       });
+//     } catch {
+//       set({
+//         error: true,
+//       });
+//     }
+//   },
+//   setSearchGadg: async () => {
+//     const { fetchNews } = SearchFetch();
+//     const params = "gadget OR review OR release";
 
-    try {
-      const noticias = await fetchNews({ params });
-      set({
-        news: noticias,
-        loading: false,
-      });
-    } catch {
-      set({
-        error: true,
-      });
-    }
-  },
-  setSearchAI: async () => {
-    const { fetchNews } = SearchFetch();
-    const params = "AI OR 'A.I.' OR artificial intelligence";
+//     try {
+//       const noticias = await fetchNews({ params });
+//       set({
+//         news: noticias,
+//         loading: false,
+//       });
+//     } catch {
+//       set({
+//         error: true,
+//       });
+//     }
+//   },
+//   setSearchAI: async () => {
+//     const { fetchNews } = SearchFetch();
+//     const params = "AI OR 'A.I.' OR artificial intelligence";
 
-    try {
-      const noticias = await fetchNews({ params });
-      set({
-        news: noticias,
-        loading: false,
-      });
-    } catch {
-      set({
-        error: true,
-      });
-    }
-  },
-  SingleNew: (noticia) => {
-    const New = {
-        titulo: noticia.title,
-        imagen: noticia.image,
-        descripcion: noticia.description,
-        contenido:noticia.content
+//     try {
+//       const noticias = await fetchNews({ params });
+//       set({
+//         news: noticias,
+//         loading: false,
+//       });
+//     } catch {
+//       set({
+//         error: true,
+//       });
+//     }
+//   },
+//   SingleNew: (noticia) => {
+//     const New = {
+//         titulo: noticia.title,
+//         imagen: noticia.image,
+//         descripcion: noticia.description,
+//         contenido:noticia.content
 
-    }
-   set({
-    singleNew: New
-   })
-}
+//     }
+//    set({
+//     singleNew: New
+//    })
+// }
 }));
 
 export default useSearchStore;

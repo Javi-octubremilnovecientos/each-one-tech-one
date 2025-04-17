@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import { Facebook, Share, Tweeter } from "../Components/Icons"
+import { Facebook, Share, Tweeter } from "../assets/Icons"
 import useSearchStore from "../Store/useSearchStore";
 // import  TopHeadlines from "../Mocks/TopHeadlines.json"
 export const SingleNewPage = () => {

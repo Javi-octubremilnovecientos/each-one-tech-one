@@ -1,5 +1,5 @@
 import React from 'react'
-import { Facebook, SearchIcon } from '../Components/Icons'
+import { Facebook, SearchIcon } from '../assets/Icons'
 import fondoFinal  from "../assets/img/fondoFinal.webp"
 
 export const ContactPage = () => {

@@ -1,16 +1,26 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 import { TopicCard } from "../Components/TopicCard";
 import { TrendyNowCard } from "../Components/TrendyNowCard";
-import TopHeadlines from "../Mocks/TopHeadlines.json";
-import { RandomNumb } from "../Hooks/randomNumb";
+import useSearchStore from "../Store/useSearchStore";
+// import TopHeadlines from "../Mocks/TopHeadlines.json";
+
 
 export const HomePage = () => {
-  const [tops, settops] = useState(TopHeadlines.articles);
+  // const [tops, settops] = useState(TopHeadlines.articles);
 
+  const { setSearchApp, news} = useSearchStore()
+
+  useEffect(() => {
+     setSearchApp()
+  }, [])
+
+  console.log("render")
+  
   return (
     <>
+   
       <section
         className="container-fluid d-flex justify-content-center align-items-center bg-md-gradient"
         id="hero"
@@ -25,6 +35,7 @@ export const HomePage = () => {
             <h3 className="text-center">Where tech Meets</h3>
           </div>
         </div>
+     
       </section>
       <section
         className="container-fluid pb-4 p-1 p-sm-4  bg-secondary  pb-4"
@@ -36,17 +47,16 @@ export const HomePage = () => {
           </div>
         </div>
         <div className="row align-items-end px-3 gx-2 gy-5">
-          {tops &&
-            tops.map((noticia, index) => {
-              const value = RandomNumb();
-              console.log(value)
+          {news &&
+            news.map((noticia, index) => {
+            
               return index === 0 ? (
                 <div className="col-12 col-lg-6">
-                  <LatestNewsCard key={value} noticia={noticia} />
+                  <LatestNewsCard  noticia={noticia} />
                 </div>
               ) : (
                 <div className="col-12 col-md-4 col-lg-3">
-                  <OtherNewsCard key={value} noticia={noticia} />
+                  <OtherNewsCard  noticia={noticia} />
                 </div>
               );
             })}

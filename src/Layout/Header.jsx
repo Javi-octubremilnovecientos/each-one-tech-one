@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchIcon } from "../Components/Icons";
+import { SearchIcon } from "../assets/Icons";
 import { Link } from "react-router-dom";
 // import useSearchStore from "../Store/useSearchStore";
 

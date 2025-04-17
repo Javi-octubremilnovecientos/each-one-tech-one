@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const LatestNewsCard = ( {noticia} ) => {
   
 // const {SingleNew} = useSearchStore()
-const fechaRaw = new Date(noticia.publishedAt)
+const fechaRaw = new Date(noticia.fecha)
 
 const fechaDef = fechaRaw.toDateString()
 
@@ -25,13 +25,13 @@ const fechaDef = fechaRaw.toDateString()
           </div>
           <div className="card-body ">
             <h3 className="card-title truncate-after-second-line text-secondary">
-              {noticia.title}
+              {noticia.titulo}
             </h3>
             <p className="lead card-subtitle mb-4">{fechaDef}</p>
             <div className="ratio ratio-21x9 rounded ">
               <img
                 className="img-fluid  h-75 object-fit-cover  pb-md-3 rounded "
-                src={noticia.image}
+                src={noticia.img}
                 alt=""
                 
               />
