@@ -3,7 +3,7 @@ import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 // import useSearchStore from "../Store/useSearchStore";
 import SmartPhones from "../Mocks/SmartPhones.json";
-import { RandomNumb } from "../Services/randomNumb";
+import { RandomNumb } from "../Hooks/randomNumb";
 import { useFilterStore } from "../Store/useFilterStore";
 
 export const TopicPage = () => {

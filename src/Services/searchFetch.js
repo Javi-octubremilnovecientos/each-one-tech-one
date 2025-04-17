@@ -7,6 +7,7 @@ export const SearchFetch = async (params) => {
   try {
     const resp = await fetch(url + apiKey);
     const datos = await resp.json(); 
+
     const noticias = datos.articles?.map((noticia)=>{
       const New = {
              titulo: noticia.title,

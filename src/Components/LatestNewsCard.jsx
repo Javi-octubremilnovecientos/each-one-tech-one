@@ -15,6 +15,7 @@ const fechaDef = fechaRaw.toDateString()
     <article >
       <Link to={"/single"}>
         <div className="card card-first bg-primary text-secondary d-flex  p-0 p-md-2" style={{maxHeight:"420px"}}>
+         
           <div className="col-6 mt-3 mb-0 ms-3 d-flex ">
             <button className="btn btn-outline-secondary d-none d-sm-inline text-secondary ms-2" >ygyg</button>
             <button className="btn btn-outline-secondary d-none d-sm-inline text-secondary ms-2" >ygyg</button>

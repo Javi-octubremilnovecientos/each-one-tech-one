@@ -4,7 +4,7 @@ import { OtherNewsCard } from "../Components/OtherNewsCard";
 import { TopicCard } from "../Components/TopicCard";
 import { TrendyNowCard } from "../Components/TrendyNowCard";
 import TopHeadlines from "../Mocks/TopHeadlines.json";
-import { RandomNumb } from "../Services/randomNumb";
+import { RandomNumb } from "../Hooks/randomNumb";
 
 export const HomePage = () => {
   const [tops, settops] = useState(TopHeadlines.articles);
