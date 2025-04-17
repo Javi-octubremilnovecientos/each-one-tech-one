@@ -7,7 +7,7 @@ export const useFilterStore = create((set, get) => ({
 
   yesterdayNews: (news) => {
     const yesterdayNews = news.filter((noticia) => {
-      const setDate = new Date(noticia.publishedAt).getDate();
+      const setDate = noticia.fecha.getDate();
       const hoy = get().today.getDate();
       return setDate === hoy - 1;
     });
@@ -15,7 +15,7 @@ export const useFilterStore = create((set, get) => ({
   },
   lastWeekNews: (news) => {
     const lastWeekNews = news.filter((noticia) => {
-      const setDate = new Date(noticia.publishedAt).getDate();
+      const setDate = noticia.fecha.getDate();
       const hoy = get().today.getDate();
       return setDate < hoy - 1 && setDate > hoy - 7;
     });

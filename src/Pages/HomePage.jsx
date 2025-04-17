@@ -16,8 +16,7 @@ export const HomePage = () => {
      setSearchApp()
   }, [])
 
-  console.log("render")
-  
+  console.log(news)
   return (
     <>
    
@@ -51,12 +50,12 @@ export const HomePage = () => {
             news.map((noticia, index) => {
             
               return index === 0 ? (
-                <div className="col-12 col-lg-6">
-                  <LatestNewsCard  noticia={noticia} />
+                <div className="col-12 col-lg-6" key={index}>
+                  <LatestNewsCard key={noticia.id} noticia={noticia} />
                 </div>
               ) : (
-                <div className="col-12 col-md-4 col-lg-3">
-                  <OtherNewsCard  noticia={noticia} />
+                <div className="col-12 col-md-4 col-lg-3" key={index*99}>
+                  <OtherNewsCard key={noticia.id}  noticia={noticia} />
                 </div>
               );
             })}

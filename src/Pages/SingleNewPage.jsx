@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 import { Facebook, Share, Tweeter } from "../assets/Icons"
 import useSearchStore from "../Store/useSearchStore";
 // import  TopHeadlines from "../Mocks/TopHeadlines.json"
@@ -48,19 +48,19 @@ export const SingleNewPage = () => {
         </div>
         <div className="row g-0 g-md-5">
           <div className="col-12 pt-2 col-md-6 border d-flex align-self-start justify-content-center p-5">
-            <img src={singleNew.imagen}
+            <img src={singleNew.img}
              alt="" className="img-fluid w-100 rounded" />
           </div>
         
           <div className="col-12 col-md-6 px-3 px-md-3 pt-3 d-flex justify-content-center align-items-stretch border">
             <p className=""> 
-              {singleNew? singleNew.contenido : ""}
+              {singleNew? singleNew.cont : ""}
             
              </p>
 
           </div>
           <div className="col-12 d-flex justify-content-center py-4 px-3">
-            <h4 className="alt-font text-primary fw-bold " >{singleNew?.descripcion}</h4>
+            <h4 className="alt-font text-primary fw-bold " >{singleNew?.desc}</h4>
           </div>
           <div className="col-12 col-lg-6 p-2">
             <div className="w-100 px-4 border d-flex flex-wrap justify-content-around  ">
