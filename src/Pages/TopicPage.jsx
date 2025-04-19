@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 
@@ -8,11 +8,12 @@ import { useFilterStore } from "../Store/useFilterStore";
 import { useParams } from "react-router-dom";
 
 
+
 export const TopicPage = () => {
   // const [news, setnews] = useState(SmartPhones.articles);
   const { topic } = useParams();
 
-  const { news, SearchHeadlines } = useSearchStore();
+  const { news} = useSearchStore();
 
   const {
     yesterdayNews,
@@ -23,13 +24,7 @@ export const TopicPage = () => {
   } = useFilterStore();
 
   
-useEffect(() => {
- 
 
-      SearchHeadlines(topic)
-
- 
-  }, [topic]);
 
   return (
     <>

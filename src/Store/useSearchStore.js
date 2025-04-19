@@ -8,9 +8,10 @@ const useSearchStore = create((set) => ({
   error: false,
   singleNew: null,
 
-  SearchHeadlines: async (topic) => {
+  SearchHeadlines: async (query) => {
     try {
-      const noticias = await newsFetch(topic);
+      console.log(query)
+      const noticias = await newsFetch(query);
 
       set({
         news: noticias,

@@ -10,11 +10,9 @@ import useSearchStore from "../Store/useSearchStore";
 export const HomePage = () => {
   // const [tops, settops] = useState(TopHeadlines.articles);
 
-  const { SearchHeadlines, news} = useSearchStore()
+  const { news} = useSearchStore()
 
-  useEffect(() => {
-     SearchHeadlines(null)
-  }, [])
+
 
 
   return (

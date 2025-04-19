@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useReducer } from "react";
 import { SearchIcon } from "../assets/Icons";
 import { Link } from "react-router-dom";
 import { categories } from "../Config/apiConfig";
+import { categoryReducer, initialState } from "../Services/categoryReducer";
+import useSearchStore from "../Store/useSearchStore";
 
 
 export const Header = () => {
+ const {SearchHeadlines}  = useSearchStore()
+ const [state, dispatch] =  useReducer(categoryReducer, initialState)
 
- return (
+ const handleDispatch = (key)=>{
+    dispatch({type:key})
+ }
+
+
+useEffect(() => {
+
+  
+ console.log(state)
+ 
+  SearchHeadlines(state.query)
+
+}, [state])
+
+  return (
     <header>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid  ">
@@ -26,23 +44,15 @@ export const Header = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary border border-primary border-2 rounded-pill p-1 ">
+              {categories &&
+                categories.map((topic,i) => (
+                  <li key={i} className="nav-item">
+                    <div className="nav-link " aria-current="page" href="#" onClick={()=>handleDispatch(i)}>
+                      <Link to={topic}>{i===0? "Home": topic}</Link>
+                    </div>
+                  </li>
+                ))}
 
-              { 
-                categories && categories.map((_)=>{
-                
-                <li className="nav-item">
-                <div className="nav-link " 
-                 aria-current="page" 
-                 href="#">
-                  <Link to={`/${_}`}>{_}</Link>
-                </div>
-              </li>
-                })
-                
-             
-              }
-       
-       
               <li className="nav-item">
                 <div className="nav-link" href="#">
                   <Link to={"/Rapshody"}>Tech Rapshody</Link>
