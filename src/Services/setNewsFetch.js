@@ -13,7 +13,7 @@ export const newsFetch = async (topic) => {
 
   const query = SetQuery(topic);
 
-  const url = `https://gnews.io/api/v4/top-headlines?&category=technology&lang=en&q=${query}&apikey=${API_KEY}`;
+  // const url = `https://gnews.io/api/v4/top-headlines?&category=technology&lang=en&q=${query}&apikey=${API_KEY}`;
 
   const res = await fetch(url);
   const data = await res.json();

@@ -1,6 +1,7 @@
 import React from "react";
 import { SearchIcon } from "../assets/Icons";
 import { Link } from "react-router-dom";
+import { categories } from "../Config/apiConfig";
 
 
 export const Header = () => {
@@ -25,36 +26,21 @@ export const Header = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav m-2 mb-2 mb-lg-0 bg-secondary border border-primary border-2 rounded-pill p-1 ">
-              <li className="nav-item">
-                <div className="nav-link " aria-current="page" href="#">
-                  <Link to={"/"}>Home</Link>
+
+              { 
+                categories && categories.map((_)=>{
+                
+                <li className="nav-item">
+                <div className="nav-link " 
+                 aria-current="page" 
+                 href="#">
+                  <Link to={`/${_}`}>{_}</Link>
                 </div>
               </li>
-              <li className="nav-item">
-                <div className="nav-link " aria-current="page" href="#">
-                  <Link to={"/App's & Software"}>App's & Software</Link>
-                </div>
-              </li>
-              <li className="nav-item">
-                <div className="nav-link " aria-current="page" href="#">
-                  <Link to={"/Smartphones"}>Smartphones</Link>
-                </div>
-              </li>
-              <li className="nav-item">
-                <div className="nav-link " aria-current="page" href="#">
-                  <Link to={"/Gadgets"}>Gadgets</Link>
-                </div>
-              </li>
-              <li className="nav-item">
-                <div className="nav-link " aria-current="page" href="#">
-                  <Link to={"/A.I."}>A.I.</Link>
-                </div>
-              </li>
-              <li className="nav-item">
-                <div className="nav-link " aria-current="page" href="#">
-                  <Link to={"/Politics & Regulation"}>Politics & Regulation</Link>
-                </div>
-              </li>
+                })
+                
+             
+              }
        
        
               <li className="nav-item">
