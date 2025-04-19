@@ -1,26 +1,11 @@
-import React, { useEffect, useReducer} from "react";
+import React from "react";
 import { SearchIcon } from "../assets/Icons";
 import { Link } from "react-router-dom";
-import useSearchStore from "../Store/useSearchStore";
-import { initialQuery, queryReduct } from "../Hooks/queryReducer";
-import { topics } from "../Config/topics";
+
 
 export const Header = () => {
-  const [state, dispatch] = useReducer(queryReduct, initialQuery);
-  
 
-
-  const { setSearchApp } = useSearchStore();
-
-  const handleReducer = (text) => {
-    dispatch({ type: text });
-  };
-
-  useEffect(() => {
-    setSearchApp(state.title);
-  }, [state]);
-
-  return (
+ return (
     <header>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid  ">
@@ -45,18 +30,33 @@ export const Header = () => {
                   <Link to={"/"}>Home</Link>
                 </div>
               </li>
-
-              {topics?.map((topic) => (
-                <li className="nav-item" key={topic}>
-                  <div
-                    className="nav-link"
-                    href="#"
-                    onClick={() => handleReducer(topic)}
-                  >
-                    <Link to={"/Topic"}>{topic}</Link>
-                  </div>
-                </li>
-              ))}
+              <li className="nav-item">
+                <div className="nav-link " aria-current="page" href="#">
+                  <Link to={"/App's & Software"}>App's & Software</Link>
+                </div>
+              </li>
+              <li className="nav-item">
+                <div className="nav-link " aria-current="page" href="#">
+                  <Link to={"/Smartphones"}>Smartphones</Link>
+                </div>
+              </li>
+              <li className="nav-item">
+                <div className="nav-link " aria-current="page" href="#">
+                  <Link to={"/Gadgets"}>Gadgets</Link>
+                </div>
+              </li>
+              <li className="nav-item">
+                <div className="nav-link " aria-current="page" href="#">
+                  <Link to={"/A.I."}>A.I.</Link>
+                </div>
+              </li>
+              <li className="nav-item">
+                <div className="nav-link " aria-current="page" href="#">
+                  <Link to={"/Politics & Regulation"}>Politics & Regulation</Link>
+                </div>
+              </li>
+       
+       
               <li className="nav-item">
                 <div className="nav-link" href="#">
                   <Link to={"/Rapshody"}>Tech Rapshody</Link>

@@ -1,6 +1,7 @@
 import { RandomNumb } from "./randomNumb";
 
 export const mapNews = (noticias) => {
+  
   if (!noticias) return;
 
   return noticias.map((item) => ({

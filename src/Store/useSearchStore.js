@@ -1,40 +1,34 @@
 import { create } from "zustand";
-import { newsFetch } from "../Services/api";
-import { mapNews } from "../Utils/mapNews";
+import { newsFetch } from "../Services/setNewsFetch";
+
 
 const useSearchStore = create((set) => ({
   news: null,
   loading: true,
   error: false,
   singleNew: null,
-  heading: null,
 
-  setSearchApp: async (params) => {
-   
-
+  SearchHeadlines: async (topic) => {
     try {
-      const noticias = await newsFetch(params);
-      const results = mapNews(noticias);
+      const noticias = await newsFetch(topic);
+
       set({
-        news: results,
+        news: noticias,
         loading: false,
         error: false,
-        heading:params
       });
     } catch {
       set({
-        heading: params,
         error: true,
         loading: false,
       });
     }
   },
- SingleNew: (noticia) => {
+  SingleNew: (noticia) => {
     set(() => ({
-      singleNew: noticia
+      singleNew: noticia,
     }));
   },
-
 }));
 
 export default useSearchStore;

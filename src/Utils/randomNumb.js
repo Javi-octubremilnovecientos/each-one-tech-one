@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Random } from "random-js";
 
 export const RandomNumb = () => {

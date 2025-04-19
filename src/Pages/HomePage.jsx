@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 import { TopicCard } from "../Components/TopicCard";
@@ -10,13 +10,13 @@ import useSearchStore from "../Store/useSearchStore";
 export const HomePage = () => {
   // const [tops, settops] = useState(TopHeadlines.articles);
 
-  const { setSearchApp, news} = useSearchStore()
+  const { SearchHeadlines, news} = useSearchStore()
 
   useEffect(() => {
-     setSearchApp()
+     SearchHeadlines(null)
   }, [])
 
-  console.log(news)
+
   return (
     <>
    

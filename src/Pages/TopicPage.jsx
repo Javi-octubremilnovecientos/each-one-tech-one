@@ -1,25 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
+
 import useSearchStore from "../Store/useSearchStore";
 // import SmartPhones from "../Mocks/SmartPhones.json";
-
 import { useFilterStore } from "../Store/useFilterStore";
+import { useParams } from "react-router-dom";
+
 
 export const TopicPage = () => {
   // const [news, setnews] = useState(SmartPhones.articles);
-  const {news ,heading} = useSearchStore()
-  const { yesterdayNews, lastWeekNews,resetFilter, filtredNews } = useFilterStore();
+  const { topic } = useParams();
+
+  const { news, SearchHeadlines } = useSearchStore();
+
+  const {
+    yesterdayNews,
+    lastWeekNews,
+    resetFilter,
+
+    filtredNews,
+  } = useFilterStore();
+
+  
+useEffect(() => {
+ 
+
+      SearchHeadlines(topic)
+
+ 
+  }, [topic]);
 
   return (
     <>
       <div className="container-fluid m-0 pb-0  bg-secondary ">
         <div className="row  ps-4 pt-5 pb-0 m-0 gy-2 ">
           <div className="col-12 p-3  ">
-            <h1 className="h1 display-2">{heading}</h1>
+            <h1 className="h1 display-2">{topic}</h1>
           </div>
           <div className="col-12 d-flex ps-2 pt-3 pb-0  mb-0">
-            <button className="btn btn-outline-primary d-none d-sm-inline text-primary ms-2" onClick={()=>resetFilter()}>
+            <button
+              className="btn btn-outline-primary d-none d-sm-inline text-primary ms-2"
+              onClick={() => resetFilter()}
+            >
               Today
             </button>
             <button
@@ -51,27 +74,25 @@ export const TopicPage = () => {
         <div className="row p-2 py-4  gy-0  border-top border-primary border-2 align-items-end ">
           {filtredNews ? (
             filtredNews.map((noticia, index) => {
-            
               return index === 0 ? (
                 <div className="col-12 col-md-6 py-3">
                   <LatestNewsCard key={noticia.id} noticia={noticia} />
                 </div>
               ) : (
                 <div className="col-12 col-md-3 mb-2 p-3">
-                  <OtherNewsCard   key={noticia.id} noticia={noticia} />
+                  <OtherNewsCard key={noticia.id} noticia={noticia} />
                 </div>
               );
             })
           ) : news ? (
             news.map((noticia, index) => {
-             
               return index === 0 ? (
                 <div className="col-12 col-md-6 py-3">
-                  <LatestNewsCard   key={noticia.id} noticia={noticia}  />
+                  <LatestNewsCard key={noticia.id} noticia={noticia} />
                 </div>
               ) : (
                 <div className="col-12 col-md-3 mb-2 p-3">
-                  <OtherNewsCard   key={noticia.id} noticia={noticia}  />
+                  <OtherNewsCard key={noticia.id} noticia={noticia} />
                 </div>
               );
             })
