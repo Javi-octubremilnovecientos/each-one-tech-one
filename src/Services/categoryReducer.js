@@ -1,7 +1,7 @@
 import React from "react";
 
 export const initialState = {
-  query: "",
+  query:[],
   noticias: [],
 };
 
@@ -16,38 +16,38 @@ export const categoryReducer = (state, action) => {
     case 1:
       return {
         ...state,
-        query: "Software OR Develop OR Microsoft OR Macbook OR Windows"
+        query:[...state.query, "Software OR Develop OR Microsoft OR Macbook OR Windows"]
       };
 
     case 2:
       return {
         ...state,
-        query: "Smartphone OR Iphone OR samsung galaxy OR xiaomi OR huawei OR app"
+        query:[...state.query,"Smartphone OR Iphone OR samsung galaxy OR xiaomi OR huawei OR app"] 
       };
 
     case 3:
       return {
         ...state,
-        query: "gadget OR gadgets OR release"
+        query:[...state.query,"gadget OR gadgets OR release"] 
       };
 
     case 4:
       return {
         ...state,
-        query: 'ai OR "A.I." OR artificial intelligence' 
+        query:[...state.query,'"A.I." OR artificial intelligence' ] 
       };
     case 5:
       return {
         ...state,
-        query: 'regulation OR politics' 
+        query:[...state.query,'regulation OR politics' ] 
       };
-    case "storeNews":
-      return {
-        ...state,
-        noticias:[...noticias,action.payload ]
-      };
+      case "storeNews":
+        return {
+          ...state,
+          noticias: [...state.noticias, action.payload], // Agrega las noticias al array
+        };
 
     default:
-        return
+        return state
   }
 };

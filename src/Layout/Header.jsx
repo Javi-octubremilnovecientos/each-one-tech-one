@@ -1,28 +1,25 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect} from "react";
 import { SearchIcon } from "../assets/Icons";
 import { Link } from "react-router-dom";
 import { categories } from "../Config/apiConfig";
-import { categoryReducer, initialState } from "../Services/categoryReducer";
+
 import useSearchStore from "../Store/useSearchStore";
 
 
 export const Header = () => {
- const {SearchHeadlines}  = useSearchStore()
- const [state, dispatch] =  useReducer(categoryReducer, initialState)
+ const {SearchHeadlines, dispatch, state}  = useSearchStore()
+
 
  const handleDispatch = (key)=>{
     dispatch({type:key})
  }
 
-
-useEffect(() => {
-
-  
- console.log(state)
- 
-  SearchHeadlines(state.query)
-
-}, [state])
+ useEffect(() => {
+  if (state.query.length > 0) {
+    const lastQuery = state.query[state.query.length - 1];
+    SearchHeadlines(lastQuery);
+  }
+}, [state.query, SearchHeadlines]);
 
   return (
     <header>
