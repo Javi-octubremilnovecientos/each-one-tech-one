@@ -19,7 +19,7 @@ export const Header = () => {
     const lastQuery = state.query[state.query.length - 1];
     SearchHeadlines(lastQuery);
   }
-}, [state.query, SearchHeadlines]);
+}, [state.query]);
 
   return (
     <header>
