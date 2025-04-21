@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Facebook, Share, Tweeter } from "../assets/Icons"
 import useSearchStore from "../Store/useSearchStore";
 // import  TopHeadlines from "../Mocks/TopHeadlines.json"

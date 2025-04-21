@@ -63,17 +63,24 @@
 }
 
 
+
 body {
- background-color: $secondary;
+  background-color: $secondary;
+  background-image:url("../assets/img/fondoFinal.webp");
   background-size: contain;
- background-repeat: no-repeat;
-
-
+  background-repeat: no-repeat;
 }
 section {
   min-height: 80vh;
+  
+}
+
+#hero{
+ background-image: linear-gradient(to top, $secondary 4%, transparent);
 
 }
+
+
 
 
 @media screen and (max-width: 1500px) {
@@ -110,7 +117,7 @@ section {
     font-weight: $display-font-weight-1
   }
   .display-2{
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: $display-font-weight-2
   }
   .display-3{
@@ -118,11 +125,15 @@ section {
     font-weight: $display-font-weight-3
   }
   h1{
-    font-size: 1.8rem;
+    font-size: 2.8rem;
   }
   h3{
     font-size: 1.2rem;
   }
+  #hero{
+    background-image: linear-gradient(to top, $secondary 80%, transparent);
+   
+   }
 
 
 

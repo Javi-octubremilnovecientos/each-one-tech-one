@@ -10,7 +10,7 @@ export const OtherNewsCard = ({noticia}) => {
     <article onClick={()=>SingleNew(noticia)}>
       <Link to={"/single"} className="text-decoration-none">
         <div className=" card p-2  bg-secondary border border-secondary ">
-          <div className="col-12 border border-dark mb-3"></div>
+          <div className="col-12 border border-primary mb-3"></div>
           <div className="col-6 d-flex ms-1 ">
             <button className="btn btn-sm btn-primary">
               Interviwes
@@ -23,7 +23,7 @@ export const OtherNewsCard = ({noticia}) => {
             <h4 className="card-title  truncate-after-second-line pt-1">
             {noticia.titulo}
             </h4>
-            <p className="card-subtitle lead text-primary mb-3 ">
+            <p className="card-subtitle  text-primary mb-3 ">
               {noticia.fecha}
             </p>
           </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 import { TopicCard } from "../Components/TopicCard";
@@ -15,10 +15,12 @@ export const HomePage = () => {
     SearchHeadlines(null);
   }, []);
 
+
+
   return (
     <>
       <section
-        className="container-fluid d-flex justify-content-center align-items-center bg-md-gradient"
+        className="container-fluid d-flex justify-content-center align-items-center "
         id="hero"
       >
         <div className="row p-2">
@@ -41,19 +43,21 @@ export const HomePage = () => {
             <h2 className="h2 display-3">LATEST NEWS</h2>
           </div>
         </div>
-        <div className="row align-items-end px-3 gx-2 gy-5">
+        <div className="row align-items-end justify-content-between px-3 gx-2 gy-5">
           {news &&
             news.map((noticia, index) => {
               return index === 0 ? (
                 <div className="col-12 col-lg-6" key={index}>
                   <LatestNewsCard key={noticia.id} noticia={noticia} />
                 </div>
-              ) : (
+              ) : index < 12 ? (
                 <div className="col-12 col-md-4 col-lg-3" key={index * 99}>
                   <OtherNewsCard key={noticia.id} noticia={noticia} />
                 </div>
-              );
+              ) : ""
             })}
+
+          <button className="col-2 btn btn-primary" >see all</button>
         </div>
         <div className="row p-4  g-2 px-6 align-items-end "></div>
       </section>
@@ -70,12 +74,10 @@ export const HomePage = () => {
         <div className="row  align-items-end px-3 gx-3 gy-3 gy-md px-4 pb-5">
           {news &&
             news
-              .map((noticia) => {   
-            
+              .map((noticia) => {
                 return (
                   <div className="col-12  col-md-6  col-lg-3" key={noticia.id}>
-                 
-                    <TopicCard noticia={noticia}/>
+                    <TopicCard noticia={noticia} />
                   </div>
                 );
               })

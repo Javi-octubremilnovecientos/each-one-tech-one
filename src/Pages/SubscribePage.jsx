@@ -2,28 +2,29 @@ import React from "react";
 
 export const SubscribePage = () => {
   return (
-    <main>
-      <section className="container-fluid  px-4">
-        <div className="row  p-4 gy-4">
-          <div className="col-12 p-4 d-flex justify-content-center">
+    <main >
+      <section className="container-fluid px-0 px-sm-4" id="hero" >
+        <div className="row  p-1 p-sm-4 gy-4 ">
+          <div className="col-12 p-2 p-sm-3 d-flex justify-content-center">
             <h1 className="h1 display-2 d-flex flex-column  align-items-start p-2">
               Subscribe <br />
               now to
               <span className="alt-font">Newsletter</span>
             </h1>
           </div>
-          <div className="col-12 text-primary fs-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+          <div className="col-12 text-primary ">
+            <p className="fs-6 fs-sm-2 p-3">    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
             reiciendis ut. Commodi, nobis iste! Sit aut commodi, delectus
             sapiente voluptatibus corrupti officia sint et debitis eveniet
             dignissimos veniam quia nulla, cum magnam accusamus perferendis non
             voluptatum, ipsam iure reprehenderit aperiam veritatis! Impedit
-            possimus corporis voluptatibus autem.
+            possimus corporis voluptatibus autem.</p>
+        
           </div>
-          <span className="separador"></span>
+       
           <div className="col-12 col-md-4"></div>
 
-          <div className="col-12 col-md-8 p-4 text-primary ">
+          <div className="col-12 col-md-8 p-4 text-primary  ">
             <h4 className="mb-3">Fill this Form</h4>
             <form
               action=""
@@ -41,7 +42,7 @@ export const SubscribePage = () => {
                 Wich topics you prefer to stay tunned?
               </label>
               <select
-                class="form-select bg-secondary border border-primary border-2 rounded-5"
+                className="form-select bg-secondary border border-primary border-2 rounded-5"
                 aria-label="Default select example"
               >
                 <option selected>All</option>
@@ -53,7 +54,7 @@ export const SubscribePage = () => {
               </select>
               <label className="mt-4">Frecuency</label>
               <select
-                class="form-select bg-secondary border border-primary border-2 rounded-5"
+                className="form-select bg-secondary border border-primary border-2 rounded-5"
                 aria-label="Default select example"
               >
                 <option selected>Daily</option>
@@ -61,7 +62,7 @@ export const SubscribePage = () => {
 
                 <option value="3">Monthly</option>
               </select>
-              <div class="form-check mt-4 ms-2">
+              <div className="form-check mt-4 ms-2">
                 <input
                   className="form-check-input rounded-circle border border-2 border-primary"
                   type="checkbox"

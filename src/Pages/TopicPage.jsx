@@ -33,10 +33,10 @@ useEffect(() => {
 
   return (
     <>
-      <div className="container-fluid m-0 pb-0  bg-secondary ">
+      <div className="container-fluid m-0 pb-0"  id="hero">
         <div className="row  ps-4 pt-5 pb-0 m-0 gy-2 ">
           <div className="col-12 p-3  ">
-            <h1 className="h1 display-2">{topic}</h1>
+            <h1 className="h1 display-2 text-center text-sm-start">{topic}</h1>
           </div>
           <div className="col-12 d-flex ps-2 pt-3 pb-0  mb-0">
             <button
@@ -70,8 +70,8 @@ useEffect(() => {
         </div>
       </div>
 
-      <section className="container-fluid  pt-3  px-5 d-flex flex-column justify-content-end bg-secondary position-relative">
-        <div className="row p-2 py-4  gy-0  border-top border-primary border-2 align-items-end ">
+      <section className="container-fluid  pt-3  px-5 d-flex flex-column justify-content-end bg-secondary">
+        <div className="row p-2 py-4  gy-3  border-top border-primary border-2 align-items-end ">
           {
           loading?( <Loader/>):
            filtredNews ? (
@@ -81,7 +81,7 @@ useEffect(() => {
                   <LatestNewsCard noticia={noticia} />
                 </div>
               ) : (
-                <div className="col-12 col-md-3 mb-2 p-3" key={noticia.id}>
+                <div className="col-12 col-md-3 mb-2 p-0 p-sm-3" key={noticia.id}>
                   <OtherNewsCard  noticia={noticia} />
                 </div>
               );
@@ -89,11 +89,11 @@ useEffect(() => {
           ) : news ? (
             news.map((noticia, index) => {
               return index === 0 ? (
-                <div className="col-12 col-md-6 py-3" key={noticia.id}>
+                <div className="col-12 col-md-6 p-0  py-3" key={noticia.id}>
                   <LatestNewsCard  noticia={noticia} />
                 </div>
               ) : (
-                <div className="col-12 col-md-3 mb-2 p-3" key={noticia.id} >
+                <div className="col-12 col-md-3 mb-2 mt-3 p-0 p-sm-3" key={noticia.id} >
                   <OtherNewsCard noticia={noticia} />
                 </div>
               );

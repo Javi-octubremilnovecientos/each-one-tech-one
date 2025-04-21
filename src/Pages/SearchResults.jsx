@@ -17,11 +17,7 @@ export const SearchResults = () => {
   
   useEffect(() => {
     
-
-
-
-
-  SearchHeadlines(query)
+SearchHeadlines(query)
  
  }, [])
  

@@ -11962,12 +11962,15 @@ textarea.form-control-lg {
 
 body {
   background-color: #f3f3e9;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 section {
   min-height: 80vh;
+}
+
+#hero {
+  background-image: url("../.");
+  background-size: cover;
 }
 
 @media screen and (max-width: 1500px) {
