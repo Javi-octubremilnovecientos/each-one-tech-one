@@ -1,11 +1,21 @@
 import React from "react";
 import { SearchIcon } from "../assets/Icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export const Header = () => {
 
- return (
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    const field = new FormData(event.target);
+    const find = field.get("query");
+
+    navigate(`/${find}`);
+  
+  };
+
+  return (
     <header>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid  ">
@@ -52,11 +62,12 @@ export const Header = () => {
               </li>
               <li className="nav-item">
                 <div className="nav-link " aria-current="page" href="#">
-                  <Link to={"/Politics & Regulation"}>Politics & Regulation</Link>
+                  <Link to={"/Politics & Regulation"}>
+                    Politics & Regulation
+                  </Link>
                 </div>
               </li>
-       
-       
+
               <li className="nav-item">
                 <div className="nav-link" href="#">
                   <Link to={"/Rapshody"}>Tech Rapshody</Link>
@@ -77,18 +88,17 @@ export const Header = () => {
             <form
               className="d-flex  bg-secondary rounded-pill mt-lg-2 py-1 border border-primary border-2"
               role="search"
+              onSubmit={handleSubmit}
             >
               <button className="btn text-primary" type="submit">
-                <Link to={"/search"}>
-                  {" "}
-                  <SearchIcon />
-                </Link>
+                <SearchIcon />
               </button>
               <input
                 className="form-control "
                 type="search"
                 placeholder=""
                 aria-label="Search"
+                name="query"
               />
             </form>
           </div>

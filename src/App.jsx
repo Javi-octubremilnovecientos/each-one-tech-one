@@ -23,7 +23,7 @@ function App() {
         <Route path="/subscribe" element={<SubscribePage/>} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/Rapshody" element={<TechRapsodyPage/>} />
-        <Route path="/search" element={<SearchResults/>} />
+        <Route path="/:" element={<SearchResults/>} />
       </Routes>
 </>
   );

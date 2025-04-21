@@ -36,10 +36,7 @@ export const SingleNewPage = () => {
       <section className="container-fluid p-0  p-lg-4 bg-secondary">
         <div className="row justify-content-start ">
           <div className="col-12 col-md-6 d-flex flex-column flex-md-row pt-3 ">
-            <div className="d-flex flex-md-column justify-content-around m-md-3 p-0 text-primary ">
-              <p className="fs-6 fs-md-3">iiuiyui</p>
-              <p>Lorem, ipsum.</p>
-            </div>
+         
             <div className="d-flex flex-md-column justify-content-around m-md-3 p-0 text-primary ">
               <p className="fs-6 fs-md-3">iuyui</p>
               <p>Lorem, ipsum.</p>

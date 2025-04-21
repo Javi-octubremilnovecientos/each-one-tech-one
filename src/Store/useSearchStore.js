@@ -6,7 +6,7 @@ const useSearchStore = create((set) => ({
   news: null,
   loading: true,
   error: false,
-  singleNew: null,
+
 
   SearchHeadlines: async (topic) => {
     try {
