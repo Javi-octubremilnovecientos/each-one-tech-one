@@ -6,9 +6,12 @@ export const useFilterStore = create((set, get) => ({
   filtredNews: null,
 
   yesterdayNews: (news) => {
+  
     const yesterdayNews = news.filter((noticia) => {
-      const setDate = noticia.fecha.getDate();
-      const hoy = get().today.getDate();
+   
+      const setDate = noticia.fecha;
+   
+      const hoy = get().today;
       return setDate === hoy - 1;
     });
     set({ filtredNews: yesterdayNews });

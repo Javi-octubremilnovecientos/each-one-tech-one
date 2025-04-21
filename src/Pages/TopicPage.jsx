@@ -6,19 +6,19 @@ import useSearchStore from "../Store/useSearchStore";
 // import SmartPhones from "../Mocks/SmartPhones.json";
 import { useFilterStore } from "../Store/useFilterStore";
 import { useParams } from "react-router-dom";
+import { Loader } from "../Components/Loader";
 
 
 export const TopicPage = () => {
   // const [news, setnews] = useState(SmartPhones.articles);
   const { topic } = useParams();
 
-  const { news, SearchHeadlines } = useSearchStore();
+  const { news, SearchHeadlines, loading, error } = useSearchStore();
 
   const {
     yesterdayNews,
     lastWeekNews,
     resetFilter,
-
     filtredNews,
   } = useFilterStore();
 
@@ -70,9 +70,11 @@ useEffect(() => {
         </div>
       </div>
 
-      <section className="container-fluid  pt-3  px-5 d-flex flex-column justify-content-end bg-secondary">
+      <section className="container-fluid  pt-3  px-5 d-flex flex-column justify-content-end bg-secondary position-relative">
         <div className="row p-2 py-4  gy-0  border-top border-primary border-2 align-items-end ">
-          {filtredNews ? (
+          {
+          loading?( <Loader/>):
+           filtredNews ? (
             filtredNews.map((noticia, index) => {
               return index === 0 ? (
                 <div className="col-12 col-md-6 py-3">

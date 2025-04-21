@@ -11,7 +11,7 @@ const useSearchStore = create((set) => ({
   SearchHeadlines: async (topic) => {
     try {
       const noticias = await newsFetch(topic);
-
+        console.log(noticias)
       set({
         news: noticias,
         loading: false,
