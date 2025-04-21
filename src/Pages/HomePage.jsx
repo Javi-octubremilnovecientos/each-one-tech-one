@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { LatestNewsCard } from "../Components/LatestNewsCard";
 import { OtherNewsCard } from "../Components/OtherNewsCard";
 import { TopicCard } from "../Components/TopicCard";
@@ -6,20 +6,17 @@ import { TrendyNowCard } from "../Components/TrendyNowCard";
 import useSearchStore from "../Store/useSearchStore";
 // import TopHeadlines from "../Mocks/TopHeadlines.json";
 
-
 export const HomePage = () => {
   // const [tops, settops] = useState(TopHeadlines.articles);
 
-  const { SearchHeadlines, news} = useSearchStore()
+  const { SearchHeadlines, news } = useSearchStore();
 
   useEffect(() => {
-     SearchHeadlines(null)
-  }, [])
-
+    SearchHeadlines(null);
+  }, []);
 
   return (
     <>
-   
       <section
         className="container-fluid d-flex justify-content-center align-items-center bg-md-gradient"
         id="hero"
@@ -34,7 +31,6 @@ export const HomePage = () => {
             <h3 className="text-center">Where tech Meets</h3>
           </div>
         </div>
-     
       </section>
       <section
         className="container-fluid pb-4 p-1 p-sm-4  bg-secondary  pb-4"
@@ -48,14 +44,13 @@ export const HomePage = () => {
         <div className="row align-items-end px-3 gx-2 gy-5">
           {news &&
             news.map((noticia, index) => {
-            
               return index === 0 ? (
                 <div className="col-12 col-lg-6" key={index}>
                   <LatestNewsCard key={noticia.id} noticia={noticia} />
                 </div>
               ) : (
-                <div className="col-12 col-md-4 col-lg-3" key={index*99}>
-                  <OtherNewsCard key={noticia.id}  noticia={noticia} />
+                <div className="col-12 col-md-4 col-lg-3" key={index * 99}>
+                  <OtherNewsCard key={noticia.id} noticia={noticia} />
                 </div>
               );
             })}
@@ -69,22 +64,22 @@ export const HomePage = () => {
       >
         <div className="row p-4 mb-3">
           <div className="col-12 py-2 border-top border-primary border-2">
-            <h2 className="h2 display-3">ALL TOPICS</h2>
+            <h2 className="h2 display-3">TRENDY NOW</h2>
           </div>
         </div>
         <div className="row  align-items-end px-3 gx-3 gy-3 gy-md px-4 pb-5">
-          <div className="col-12  col-md-6  col-lg-3">
-            <TopicCard />
-          </div>
-          <div className="col-12  col-md-6  col-lg-3">
-            <TopicCard />
-          </div>
-          <div className="col-12  col-md-6  col-lg-3">
-            <TopicCard />
-          </div>
-          <div className="col-12  col-md-6  col-lg-3">
-            <TopicCard />
-          </div>
+          {news &&
+            news
+              .map((noticia) => {   
+            
+                return (
+                  <div className="col-12  col-md-6  col-lg-3" key={noticia.id}>
+                 
+                    <TopicCard noticia={noticia}/>
+                  </div>
+                );
+              })
+              .splice(0, 4)}
         </div>
       </section>
 
@@ -94,7 +89,7 @@ export const HomePage = () => {
       >
         <div className="row p-4 mb-3">
           <div className="col-12 py-2 border-top border-primary border-2">
-            <h2 className="h2 display-3">TRENDY NOW</h2>
+            <h2 className="h2 display-3">SAVE THE DATE</h2>
           </div>
         </div>
         <div className="row p-3 px-md-5">

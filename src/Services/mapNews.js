@@ -9,6 +9,7 @@ export const mapNews = (noticias) => {
     titulo: item.title,
     desc: item.description,
     cont: item.content,
+    fechaIso:item.publishedAt,
     fecha: formatDate(item.publishedAt),
     img: item.image,
   }));

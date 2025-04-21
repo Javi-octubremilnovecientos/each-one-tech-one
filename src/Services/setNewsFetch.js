@@ -9,20 +9,21 @@ export const newsFetch = async (topic) => {
   const check = checkLocalStorage(topic);
 
   if (check) {
+   
     return check.results;
   }
 
   const query = SetQuery(topic);
- const dia =   today()
 
-   
+   const hoy = today()
 
-  // const url = `https://gnews.io/api/v4/search?&lang=en&q=${query}&max=70&sortby=publishedAt&from=2025-04-06T00:10:10Z&apikey=${API_KEY}`;
+  const url = ` https://gnews.io/api/v4/top-headlines?category=technology&lang=en&expand=content&max=90&q=${query}&from=${hoy}&apikey=${API_KEY}`;
 
   const res = await fetch(url);
   const data = await res.json();
   const news = data.articles;
   const results = mapNews(news);
   setStorage({ topic, results });
+
   return results;
 };

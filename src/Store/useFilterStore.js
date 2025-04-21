@@ -1,31 +1,35 @@
 import React from "react";
 import { create } from "zustand";
+import { today, yesterday } from "../Utils/formatter";
 
-export const useFilterStore = create((set, get) => ({
-  today: new Date(),
+export const useFilterStore = create((set) => ({
   filtredNews: null,
 
   yesterdayNews: (news) => {
+    const hoy = today();
+    const ayer = yesterday(hoy);
   
     const yesterdayNews = news.filter((noticia) => {
-   
-      const setDate = noticia.fecha;
-   
-      const hoy = get().today;
-      return setDate === hoy - 1;
+      const fechaNoticia = new Date(noticia.fechaIso); // Asegúrate de convertir a Date
+      return fechaNoticia >= ayer && fechaNoticia < hoy;
     });
+  
     set({ filtredNews: yesterdayNews });
   },
   lastWeekNews: (news) => {
+    const hoy = today();
+    const ayer = yesterday(hoy);
+  
     const lastWeekNews = news.filter((noticia) => {
-      const setDate = noticia.fecha.getDate();
-      const hoy = get().today.getDate();
-      return setDate < hoy - 1 && setDate > hoy - 7;
+      const fechaNoticia = new Date(noticia.fechaIso); // Asegúrate de convertir a Date
+      return fechaNoticia < ayer;
     });
-    console.log("filtredo")
+  
     set({ filtredNews: lastWeekNews });
   },
-  resetFilter: () => {
-    set({ filtredNews: null });
-  },
+  resetFilter: ()=>{
+    set({
+      filtredNews:null
+    })
+  }
 }));

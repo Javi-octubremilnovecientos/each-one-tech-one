@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import jeanLuc from "../assets/img/jeanLuc.jpg";
 
-export const TopicCard = () => {
+export const TopicCard = ({noticia}) => {
+
   return (
     <article>
       <div
@@ -10,7 +11,7 @@ export const TopicCard = () => {
         style={{ minHeight: "500px" }}
       >
         <img
-          src={jeanLuc}
+          src={noticia? noticia.img : jeanLuc}
           className="img-fluid position-absolute h-100 object-fit-cover rounded "
           alt=""
         />
@@ -29,10 +30,11 @@ export const TopicCard = () => {
             </button>
           </div>
 
-          <h4 className="h4 card-title fw-bold text-secondary ">SMATPHOBES</h4>
+          <h4 className="h6 card-title fw-bolder text-secondary truncate-after-second-line">
+            {noticia? noticia.titulo : ""}  </h4>
 
           <p className="card-subtitle  text-secondary ">
-            Last updated 3 mins ago
+            {noticia? noticia.fecha : ""}
           </p>
         </div>
       </div>

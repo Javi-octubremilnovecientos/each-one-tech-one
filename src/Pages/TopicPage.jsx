@@ -13,7 +13,7 @@ export const TopicPage = () => {
   // const [news, setnews] = useState(SmartPhones.articles);
   const { topic } = useParams();
 
-  const { news, SearchHeadlines, loading, error } = useSearchStore();
+  const { news, SearchHeadlines, loading } = useSearchStore();
 
   const {
     yesterdayNews,
@@ -27,7 +27,7 @@ useEffect(() => {
  
 
       SearchHeadlines(topic)
-
+      resetFilter()
  
   }, [topic]);
 
@@ -55,7 +55,7 @@ useEffect(() => {
               className="btn btn-outline-primary d-none d-sm-inline text-primary ms-2"
               onClick={() => lastWeekNews(news)}
             >
-              Last Week
+            Older
             </button>
             <button className="btn btn-outline-primary btn-sm d-inline d-sm-none text-primary  ms-2">
               Today
@@ -64,7 +64,7 @@ useEffect(() => {
               Yesterday
             </button>
             <button className="btn btn-outline-primary btn-sm d-inline d-sm-none text-primary  ms-2">
-              Last Week
+            Older
             </button>
           </div>
         </div>
@@ -77,24 +77,24 @@ useEffect(() => {
            filtredNews ? (
             filtredNews.map((noticia, index) => {
               return index === 0 ? (
-                <div className="col-12 col-md-6 py-3">
-                  <LatestNewsCard key={noticia.id} noticia={noticia} />
+                <div  key={noticia.id} className="col-12 col-md-6 py-3">
+                  <LatestNewsCard noticia={noticia} />
                 </div>
               ) : (
-                <div className="col-12 col-md-3 mb-2 p-3">
-                  <OtherNewsCard key={noticia.id} noticia={noticia} />
+                <div className="col-12 col-md-3 mb-2 p-3" key={noticia.id}>
+                  <OtherNewsCard  noticia={noticia} />
                 </div>
               );
             })
           ) : news ? (
             news.map((noticia, index) => {
               return index === 0 ? (
-                <div className="col-12 col-md-6 py-3">
-                  <LatestNewsCard key={noticia.id} noticia={noticia} />
+                <div className="col-12 col-md-6 py-3" key={noticia.id}>
+                  <LatestNewsCard  noticia={noticia} />
                 </div>
               ) : (
-                <div className="col-12 col-md-3 mb-2 p-3">
-                  <OtherNewsCard key={noticia.id} noticia={noticia} />
+                <div className="col-12 col-md-3 mb-2 p-3" key={noticia.id} >
+                  <OtherNewsCard noticia={noticia} />
                 </div>
               );
             })
