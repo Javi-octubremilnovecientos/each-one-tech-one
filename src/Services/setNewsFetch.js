@@ -14,8 +14,9 @@ export const newsFetch = async (topic) => {
 
   const query = SetQuery(topic);
  const dia =   today()
+
    
-console.log(dia)
+
   // const url = `https://gnews.io/api/v4/search?&lang=en&q=${query}&max=70&sortby=publishedAt&from=2025-04-06T00:10:10Z&apikey=${API_KEY}`;
 
   const res = await fetch(url);
