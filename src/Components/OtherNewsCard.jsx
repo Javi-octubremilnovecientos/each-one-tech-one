@@ -1,40 +1,39 @@
 import React from "react";
-import cuadro from "../assets/img/cuadro.png";
-export const OtherNewsCard = () => {
+
+import { Link } from "react-router-dom";
+import useSearchStore from "../Store/useSearchStore";
+export const OtherNewsCard = ({noticia}) => {
+
+  const {SingleNew} = useSearchStore()
+
   return (
-    <>
-      <div className="card card-second p-1  border-top border-white-50 border-3 " style={{backgroundColor:"transparent", border:"none"}}>
-      <div className="col-6 d-flex ms-1 pt-2" style={{ fontFamily: "Neue-Light" }}>
-          <a
-            href="#"
-            className="btn btn-sm border border-primary text-primary rounded-pill me-2 "
-          >
-            Interviwes
-          </a>
-          <a
-            href="#"
-            className="btn btn-sm border border-primary  text-primary rounded-pill "
-          >
-            artist
-          </a>
+    <article onClick={()=>SingleNew(noticia)}>
+      <Link to={"/single"} className="text-decoration-none">
+        <div className=" card p-2  bg-secondary border border-secondary ">
+          <div className="col-12 border border-primary mb-3"></div>
+          <div className="col-6 d-flex ms-1 ">
+            <button className="btn btn-sm btn-primary">
+              Interviwes
+            </button>
+            <button className="btn btn-sm btn-outline-primary ms-1">
+              artist
+            </button>
+          </div>
+          <div className="card-body pt-1 ">
+            <h4 className="card-title  truncate-after-second-line pt-1">
+            {noticia.titulo}
+            </h4>
+            <p className="card-subtitle  text-primary mb-3 ">
+              {noticia.fecha}
+            </p>
+          </div>
+         <div className="ratio ratio-4x3">
+          <img className="card-img object-fit-cover " alt="" 
+          src={noticia.img}
+           />
+          </div>
         </div>
-        <div className="card-body p-1">
-        <h5
-            className="card-title h6 "
-            style={{ fontFamily: "Neue-Medium" }}
-          >
-            Exclusive Interview With HollyWood Actor Winning Award, Jean Luc
-            Godard and his wife
-          </h5>
-          <p
-            className="card-subtitle mb-3"
-            style={{ fontFamily: "Neue-Light" }}
-          >
-            July 04.2023
-          </p>
-        </div>
-        <img className="card-img pt- rounded-4" src={cuadro} alt="" style={{aspectRatio:"1/1",objectFit:"cover"}}/>
-      </div>
-    </>
+      </Link>
+    </article>
   );
 };

@@ -1,46 +1,43 @@
 import React from "react";
-import jeanLuc from "../assets/img/jean-luc-godard.jpg";
-export const LatestNewsCard = () => {
-  return (
-    <>
-      <div className="card card-first bg-primary text-secondary rounded-4 d-flex  p-2">
-        <div className="col-6 mt-3 mb-0 ms-3 " style={{ fontFamily: "Neue-Light" }}>
-          <a
-            href="#"
-            className="btn btn-sm border border-secondary text-secondary rounded-pill me-2 "
-          >
-            Interviwes
-          </a>
-          <a
-            href="#"
-            className="btn btn-sm border border-secondary  text-secondary rounded-pill "
-          >
-            artist
-          </a>
-        </div>
-        <div className="card-body ">
-          <h5
-            className="card-title mb-2"
-            style={{ fontFamily: "Neue-Medium" }}
-          >
-            Exclusive Interview With HollyWood Actor Winning Award, Jean Luc
-            Godard and his wife
-          </h5>
-          <h6
-            className="card-subtitle mb-4"
-            style={{ fontFamily: "Neue-Light" }}
-          >
-            July 04.2023
-          </h6>
 
-          <img
-            className="img-fluid rounded-4 mt-2 pb-3"
-            src={jeanLuc}
-            alt=""
-            style={{ aspectRatio: "3/1", objectFit: "cover" }}
-          />
+import { Link } from "react-router-dom";
+import useSearchStore from "../Store/useSearchStore";
+
+export const LatestNewsCard = ( {noticia} ) => {
+  
+const {SingleNew} = useSearchStore()
+
+
+
+
+  return (
+    <article onClick={()=>SingleNew(noticia)} >
+      <Link to={"/single"}>
+        <div className="card card-first bg-primary text-secondary d-flex  p-0 p-md-2" style={{maxHeight:"420px"}}>
+         
+          <div className="col-6 mt-3 mb-0 ms-3 d-flex ">
+            <button className="btn btn-outline-secondary d-none d-sm-inline text-secondary ms-2" >ygyg</button>
+            <button className="btn btn-outline-secondary d-none d-sm-inline text-secondary ms-2" >ygyg</button>
+            <button className="btn btn-outline-secondary btn-sm d-inline d-sm-none text-secondary ms-2" >gyuuygyg</button>
+            <button className="btn btn-outline-secondary btn-sm d-inline d-sm-none text-secondary ms-2" >gyuuygyg</button>
+          
+          </div>
+          <div className="card-body ">
+            <h3 className="card-title truncate-after-second-line text-secondary">
+              {noticia.titulo}
+            </h3>
+            <p className="lead card-subtitle mb-4">{noticia.fecha}</p>
+            <div className="ratio ratio-21x9 rounded ">
+              <img
+                className="img-fluid  h-75 object-fit-cover  pb-md-3 rounded "
+                src={noticia.img}
+                alt=""
+                
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </>
+      </Link>
+    </article>
   );
 };

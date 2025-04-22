@@ -6,8 +6,9 @@ export const LayOut = ({ children }) => {
   return (
     <>
       <Header />
-
+      <main>
       {children}
+      </main>
 
       <Footer />
     </>

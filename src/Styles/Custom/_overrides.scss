@@ -1,0 +1,146 @@
+
+@font-face {
+  font-family: "Neue-Regular";
+  src: url("/Fonts/NeueMontreal-Regular.woff2") format("woff2");
+  font-weight: normal;
+
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Neue-Light";
+  src: url("/Fonts/NeueMontreal-Light.woff2") format("woff2");
+  font-weight: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue-Light";
+  src: url("/Fonts/NeueMontreal-Light.woff2") format("woff2");
+  font-weight: normal;
+
+  font-display: swap;
+}
+.display-1{
+  font-size:$display-font-size-1;
+  font-weight: $display-font-weight-1
+}
+.display-2{
+  font-size: $display-font-size-2;
+  font-weight: $display-font-weight-2
+}
+.display-3{
+  font-size: $display-font-size-3;
+  font-weight: $display-font-weight-3
+}
+.card-title{
+  font-family: "Neue-Regular";
+  font-weight: $h3-font-weight;
+  
+}
+.card-subtitle{
+  font-family: "Neue-Light";
+
+}
+.truncate-after-second-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /* Necesario para los elementos de tipo bloque */
+  -webkit-line-clamp: 2;  /* Mostrar hasta la segunda línea */
+  overflow: hidden;       /* Ocultar todo el contenido fuera de la segunda línea */
+  word-wrap: break-word;  /* Permitir que las palabras largas se rompan */
+}
+
+.alt-font {
+  font-family: $alt-font, sans-serif;
+}
+.alt-font-bold {
+  font-family: $alt-font-bold, sans-serif;
+}
+.alt-font-thin {
+  font-family: $alt-font-thin, sans-serif;
+}
+
+
+
+body {
+  background-color: $secondary;
+  background-image:url("../assets/img/fondoFinal.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section {
+  min-height: 80vh;
+  
+}
+
+#hero{
+ background-image: linear-gradient(to top, $secondary 4%, transparent);
+
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+
+
+
+@media screen and (max-width: 1500px) {
+  .nav-item .nav-link {
+    font-size: 0.9rem;
+    padding: 3;
+    text-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav-item .nav-link {
+    font-size: 0.89rem;
+    text-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .nav-item .nav-link {
+    font-size: 0.71rem;
+    text-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .nav-item .nav-link {
+    font-size: 0.82rem;
+    text-wrap: nowrap;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .display-1{
+    font-size:4rem;
+    font-weight: $display-font-weight-1
+  }
+  .display-2{
+    font-size: 3.4rem;
+    font-weight: $display-font-weight-2
+  }
+  .display-3{
+    font-size: 2rem;
+    font-weight: $display-font-weight-3
+  }
+  h1{
+    font-size: 2.8rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+  #hero{
+    background-image: linear-gradient(to top, $secondary 80%, transparent);
+   
+   }
+
+
+
+}
+

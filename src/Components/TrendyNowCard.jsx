@@ -1,18 +1,28 @@
 import React from "react";
 
-export const TrendyNowCard = () => {
+
+
+export const TrendyNowCard = ({noticia}) => {
+
   return (
-    <>
-    <div className="row card-trendy w-100 rounded-4">
-      <div className="col-12 col-md-2 p-3">
-        <p className="fs-6 text-primary" style={{fontFamily:"Neue-Medium"}}>May, 13 2023</p>
-      </div>
-      <div className="col-12 col-md-10 p-3">
-      <p className="fs-2  text-primary " style={{fontFamily:"Neue-Regular"}}>Madev Wdj0af vivhr9u8 rhibetuibhtebuih</p>
-      </div>
-      
+    <article>
+     
+    <div className="card mb-3 bg-white border rounded p-3 p-sm-4">
+  <div className="row g-0">
+    <div className="col-md-2">
+    <p className="lead fs-6 fs-sm-4">{noticia.fecha}</p>
     </div>
-    </>
+    <div className="col-md-10">
+      <div className="card-body">
+        <h3 className="card-title">{noticia.desc}</h3>
+        <p className="mb-0">More info at:</p>
+       <p> <a href={noticia.url} className="link-underline-primary">{noticia.url}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </article>
     
   );
 };
