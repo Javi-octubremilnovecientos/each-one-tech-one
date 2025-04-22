@@ -71,7 +71,7 @@ useEffect(() => {
       </div>
 
       <section className="container-fluid  pt-3  px-5 d-flex flex-column justify-content-end bg-secondary">
-        <div className="row p-2 py-4  gy-3  border-top border-primary border-2 align-items-end ">
+        <div className="row mt-1 p-2 py-4  gy-3  border-top border-primary border-2 align-items-end ">
           {
           loading?( <Loader/>):
            filtredNews ? (

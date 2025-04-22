@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { newsFetch } from "../Services/setNewsFetch";
-import { mapNews } from "../Services/mapNews";
+
 import { checkLocalStorage } from "../Services/setLocalStorage";
 
 const useSearchStore = create((set) => ({

@@ -10,7 +10,7 @@ export const OtherNewsCard = ({noticia}) => {
     <article onClick={()=>SingleNew(noticia)}>
       <Link to={"/single"} className="text-decoration-none">
         <div className=" card p-2  bg-secondary border border-secondary ">
-          <div className="col-12 border border-primary mb-3"></div>
+          <div className="col-12 border border-info mb-3"></div>
           <div className="col-6 d-flex ms-1 ">
             <button className="btn btn-sm btn-primary">
               Interviwes

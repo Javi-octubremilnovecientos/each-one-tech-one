@@ -19,6 +19,7 @@ export const HomePage = () => {
     SearchRapsodhy()
   }, []);
 
+  console.log(news)
 
   return (
     <>
