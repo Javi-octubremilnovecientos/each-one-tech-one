@@ -15,6 +15,6 @@ export const SetQuery = (topic) => {
     case null:
       return 'smartphone OR AI OR space' ;
     default:
-     return topic.replaceAll(",", " OR ") ; 
+     return topic.trim().replaceAll(",", " OR ") ; 
   }
 };

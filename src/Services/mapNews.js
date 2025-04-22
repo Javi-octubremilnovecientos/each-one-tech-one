@@ -1,5 +1,6 @@
-import { RandomNumb } from "../Utils/randomNumb";
+
 import {formatDate}  from "../Utils/formatter"
+import {RandomNumb}   from "../Utils/randomNumb"
 export const mapNews = (noticias) => {
   
   if (!noticias) return;
@@ -11,6 +12,7 @@ export const mapNews = (noticias) => {
     cont: item.content,
     fechaIso:item.publishedAt,
     fecha: formatDate(item.publishedAt),
+    fuente: item.source.name,
     url: item.url,
     img: item.image,
   }));

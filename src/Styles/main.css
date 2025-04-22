@@ -1,43 +1,43 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Neue-Light";
-  src: url("../public/Fonts/NeueMontreal-Light.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Light.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue-Medium";
-  src: url("../public/Fonts/NeueMontreal-Medium.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Medium.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue-Regular";
-  src: url("../public/Fonts/NeueMontreal-Regular.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Regular.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue-Bold";
-  src: url("../public/Fonts/NeueMontreal-Bold.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Bold.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Eiko";
-  src: url("../public/Fonts/PPEiko-Medium.woff2") format("woff2");
+  src: url("/Fonts/PPEiko-Medium.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Eiko-Heavy";
-  src: url("../public/Fonts/PPEiko-Heavy.woff2") format("woff2");
+  src: url("/Fonts/PPEiko-Heavy.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Eiko-Thin";
-  src: url("../public/Fonts/PPEiko-Thin.woff2") format("woff2");
+  src: url("/Fonts/PPEiko-Thin.woff2") format("woff2");
   font-weight: bold;
   font-display: swap;
 }
@@ -2155,7 +2155,7 @@ progress {
 
 .form-text {
   margin-top: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.5rem;
   color: var(--bs-secondary-color);
 }
 
@@ -2202,7 +2202,7 @@ progress {
   padding: 0;
 }
 .form-control::placeholder {
-  color: var(--bs-secondary-color);
+  color: gray;
   opacity: 1;
 }
 .form-control:disabled {
@@ -2765,7 +2765,7 @@ textarea.form-control-lg {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.5rem;
   color: var(--bs-form-valid-color);
 }
 
@@ -2855,7 +2855,7 @@ textarea.form-control-lg {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.5rem;
   color: var(--bs-form-invalid-color);
 }
 
@@ -3929,10 +3929,10 @@ textarea.form-control-lg {
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-nav-link-padding-x: 1.5rem;
+  --bs-navbar-nav-link-padding-x: 1.3rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
-  --bs-navbar-toggler-font-size: 1.25rem;
+  --bs-navbar-toggler-font-size: 2.5rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2810, 40, 126, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   --bs-navbar-toggler-border-color: none;
   --bs-navbar-toggler-border-radius: 50px;
@@ -11900,19 +11900,19 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "Neue-Regular";
-  src: url("../public/Fonts/NeueMontreal-Regular.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Regular.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue-Light";
-  src: url("../public/Fonts/NeueMontreal-Light.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Light.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue-Light";
-  src: url("../public/Fonts/NeueMontreal-Light.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Light.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
@@ -11962,6 +11962,9 @@ textarea.form-control-lg {
 
 body {
   background-color: #f3f3e9;
+  background-image: url("../assets/img/fondoFinal.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 section {
@@ -11969,8 +11972,12 @@ section {
 }
 
 #hero {
-  background-image: url("../.");
-  background-size: cover;
+  background-image: linear-gradient(to top, #f3f3e9 4%, transparent);
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -12004,7 +12011,7 @@ section {
     font-weight: 600;
   }
   .display-2 {
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: 1000;
   }
   .display-3 {
@@ -12012,9 +12019,12 @@ section {
     font-weight: 800;
   }
   h1, .h1 {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
   }
   h3, .h3 {
     font-size: 1.2rem;
+  }
+  #hero {
+    background-image: linear-gradient(to top, #f3f3e9 80%, transparent);
   }
 }/*# sourceMappingURL=main.css.map */

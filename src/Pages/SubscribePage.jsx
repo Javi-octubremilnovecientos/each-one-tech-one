@@ -15,7 +15,7 @@ export const SubscribePage = () => {
           <div className="col-12 text-primary">
             <p className="h3 p-3">
             Each One Tech One is your go-to platform for all things tech. From the latest gadgets to groundbreaking innovations, we bring you curated content to keep you ahead in the tech world. <br /> Join us and explore the future of technology today!
-              Stay informed with the latest news, trends, and insights delivered straight to your inbox. <br /> <br /> Subscribe now and join a community of informed readers who value staying ahead in today’s fast-paced world. Don’t wait—sign up today!
+              Stay informed with the latest news, trends, and insights delivered straight to your inbox. 
             </p>
           </div>
           <div className="col-12 text-primary">

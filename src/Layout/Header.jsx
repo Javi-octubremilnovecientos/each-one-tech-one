@@ -22,7 +22,7 @@ export const Header = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid  ">
+        <div className="container-fluid ">
           <button
             className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
            onClick={handleDropdown}  >
@@ -84,25 +84,25 @@ export const Header = () => {
             </ul>
 
           </div>
-            <form
-              className="d-flex  bg-secondary rounded-pill mt-lg-2 py-1 border border-primary border-2"
+          <form
+              className="d-flex  bg-secondary rounded-pill mt-lg-2 py-2 border border-primary border-2"
               role="search"
               onSubmit={handleSubmit}
             >
-              <button className="btn text-primary" type="submit">
+              <button className="btn btn-sm m-0 text-primary" type="submit">
                 <SearchIcon />
               </button>
               <input
-                className="form-control "
+                className="form-control p-0"
                 type="search"
-                placeholder=""
+                placeholder="separate,by,comma"
                 aria-label="Search"
                 name="query"
               />
-            </form>
+          </form>
         </div>  
-        </nav>
-        <div className="container-fluid bg-secondary position-absolute z-3 " style={dropdown ? { top: "0" } : { top:"-100%" }}>
+      </nav>
+      <div className="container-fluid bg-secondary position-absolute z-3 " style={dropdown ? { top: "0" } : { top:"-100%" }}>
           <div className="row w-100 justify-content-end ">
             <div className="col-1 p-2"><button className="btn p-1 btn-lg" onClick={handleDropdown}>X</button></div>
           </div>
@@ -160,7 +160,7 @@ export const Header = () => {
             </ul>
     
           </div>
-        </div>
+      </div>
     
 
     </header>

@@ -18,7 +18,7 @@ export const HomePage = () => {
     SearchEvents()
     SearchRapsodhy()
   }, []);
-  console.log(rapshody)
+
 
   return (
     <>
