@@ -1,7 +1,7 @@
 // Fuentes personalizadas
 @font-face {
   font-family: "Neue-Light";
-  src: url("../../../public/Fonts/NeueMontreal-Light.woff2") format("woff2");
+  src: url("/public/Fonts/NeueMontreal-Light.woff2") format("woff2");
   font-weight: normal;
 
   font-display: swap;
@@ -9,14 +9,14 @@
 
 @font-face {
   font-family: "Neue-Medium";
-  src: url("../../../public/Fonts/NeueMontreal-Medium.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Medium.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Neue-Regular";
-  src: url("../../../public/Fonts/NeueMontreal-Regular.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Regular.woff2") format("woff2");
   font-weight: normal;
 
   font-display: swap;
@@ -24,28 +24,28 @@
 
 @font-face {
   font-family: "Neue-Bold";
-  src: url("../../../public/Fonts/NeueMontreal-Bold.woff2") format("woff2");
+  src: url("/Fonts/NeueMontreal-Bold.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Eiko";
-  src: url("../../../public/Fonts/PPEiko-Medium.woff2") format("woff2");
+  src: url("/Fonts/PPEiko-Medium.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Eiko-Heavy";
-  src: url("../../../public/Fonts/PPEiko-Heavy.woff2") format("woff2");
+  src: url("/Fonts/PPEiko-Heavy.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Eiko-Thin";
-  src: url("../../../public/Fonts/PPEiko-Thin.woff2") format("woff2");
+  src: url("/Fonts/PPEiko-Thin.woff2") format("woff2");
   font-weight: bold;
   font-display: swap;
 }
