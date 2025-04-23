@@ -6,7 +6,7 @@ import { checkLocalStorage } from "../Services/setLocalStorage";
 const useSearchStore = create((set) => ({
   news: null,
   events: null,
-  repashody: null,
+  rapshody: null,
   loading: true,
   error: false,
 
@@ -32,7 +32,7 @@ const useSearchStore = create((set) => ({
 
     if (check) {
       set({
-        events: check.results,
+        rapshody: check.results,
         loading: false,
         error: false,
       });

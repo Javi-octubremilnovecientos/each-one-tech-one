@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import React from "react";
 import { NotFound } from "./Pages/NotFound";
 import { HomePage } from "./Pages/HomePage";
@@ -8,6 +8,7 @@ import { ContactPage } from "./Pages/ContactPage";
 import { TechRapsodyPage } from "./Pages/TechRapsodyPage";
 import { SubscribePage } from "./Pages/SubscribePage";
 import { SearchResults } from "./Pages/SearchResults";
+import ScrollToTop from './Utils/scrollToTop';
 
 
 
@@ -15,6 +16,7 @@ import { SearchResults } from "./Pages/SearchResults";
 function App() {
   return (
  <>
+  <ScrollToTop/>
       <Routes>
         <Route path="*" element={<NotFound/>} />
         <Route path="/" element={<HomePage/>} />

@@ -66,7 +66,7 @@ console.log(single)
           </div>
           <div className="col-12 d-flex justify-content-center py-4 px-3">
             <h4 className="alt-font text-primary fw-bold " >
-              {/* {'" ' + singleNew? singleNew.desc : "" + ' "'} */}
+             {'" ' + singleNew? singleNew.desc : "" + ' "'} 
               </h4>
           </div>
           <div className="col-12 col-lg-6 p-2">

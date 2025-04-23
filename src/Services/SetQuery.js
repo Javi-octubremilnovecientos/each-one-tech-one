@@ -11,7 +11,7 @@ export const SetQuery = (topic) => {
     case "Politics & Regulation":
       return "regulation OR law OR politics";
     case "rapshody":
-      return "release OR review OR update";
+      return "release OR review";
     case null:
       return 'smartphone OR AI OR space' ;
     default:

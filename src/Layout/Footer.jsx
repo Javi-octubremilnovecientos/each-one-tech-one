@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     
-<footer className="bg-primary text-white text-center py-3 mt-4">
+<footer className="bg-primary text-white text-center py-3">
     <div className="container">
         <p className="mb-0">© 2023 Each-one-Tech-one. All rights reserved.</p>
         <p className="mb-0">

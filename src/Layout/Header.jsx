@@ -68,7 +68,7 @@ export const Header = () => {
 
               <li className="nav-item">
                 <div className="nav-link" href="#">
-                  <Link to={"/Releases"}>R&R</Link>
+                  <Link to={"/Rapshody"}>R&R</Link>
                 </div>
               </li>
               <li className="nav-item">
@@ -78,7 +78,7 @@ export const Header = () => {
               </li>
               <li className="nav-item">
                 <div className="nav-link" aria-disabled="true" >
-                  <Link to={"/Contact"}>contact</Link>
+                  <Link to={"/Contact"}>Contact</Link>
                 </div>
               </li>
             </ul>
@@ -93,7 +93,7 @@ export const Header = () => {
                 <SearchIcon />
               </button>
               <input
-                className="form-control p-0"
+                className="form-control p-1"
                 type="search"
                 placeholder="separate,by,comma"
                 aria-label="Search"
@@ -144,7 +144,7 @@ export const Header = () => {
 
               <li className="nav-item">
                 <div className="nav-link fs-6 py-2 ps-2" href="#" onClick={handleDropdown}>
-                  <Link to={"/Rapshody"}>Tech Rapshody</Link>
+                  <Link to={"/Rapshody"}>R&R</Link>
                 </div>
               </li>
               <li className="nav-item">

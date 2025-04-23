@@ -6,7 +6,7 @@ export const LayOut = ({ children }) => {
   return (
     <>
       <Header />
-      <main>
+      <main >
       {children}
       </main>
 

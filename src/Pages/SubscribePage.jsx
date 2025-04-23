@@ -1,8 +1,11 @@
 import React from "react";
 
 export const SubscribePage = () => {
+
+
+
   return (
-    <main>
+    
       <section className="container-fluid px-0 px-sm-4" id="hero">
         <div className="row p-1 p-sm-4 gy-4">
           <div className="col-12 p-2 p-sm-3 d-flex justify-content-center">
@@ -26,8 +29,8 @@ export const SubscribePage = () => {
           <div className="col-12 col-md-4"></div>
           <div className="col-12 col-md-8 p-4 text-primary">
             <h4 className="mb-3">Fill this Form</h4>
-            <form
-              action=""
+            <form 
+              action="POST"
               className="d-flex flex-column justify-content-around align-items-start"
             >
               <label className="label">e-mail</label>
@@ -72,13 +75,13 @@ export const SubscribePage = () => {
                   Pravacy Policiy
                 </label>
               </div>
-              <button className="m-4  btn btn-lg border border-2 border-primary rounded-pill text-primary">
+              <button type="submit"  className="m-4  btn btn-lg border border-2 border-primary rounded-pill text-primary">
                 SUBMIT
               </button>
             </form>
           </div>
         </div>
       </section>
-    </main>
+   
   );
 };
