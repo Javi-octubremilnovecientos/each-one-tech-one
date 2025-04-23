@@ -102,9 +102,9 @@ useEffect(() => {
             <p>Hecho a dreder</p>
           )}
         </div>
-        <button className="btn btn-lg border border-primary border-2 rounded-pill align-self-end m-4">
+        {/* <button className="btn btn-lg border border-primary border-2 rounded-pill align-self-end m-4">
           see all
-        </button>
+        </button> */}
         <div className="separador"></div>
       </section>
     </>

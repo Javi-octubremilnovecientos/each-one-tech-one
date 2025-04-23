@@ -68,7 +68,7 @@ export const Header = () => {
 
               <li className="nav-item">
                 <div className="nav-link" href="#">
-                  <Link to={"/Rapshody"}>Tech Rapshody</Link>
+                  <Link to={"/Releases"}>R&R</Link>
                 </div>
               </li>
               <li className="nav-item">

@@ -54,7 +54,7 @@ export const HomePage = () => {
                 <div className="col-12 col-lg-6" key={index}>
                   <LatestNewsCard key={noticia.id} noticia={noticia} />
                 </div>
-              ) : index < 12 ? (
+              ) : index < 10 ? (
                 <div className="col-12 col-md-4 col-lg-3" key={index * 99}>
                   <OtherNewsCard key={noticia.id} noticia={noticia} />
                 </div>
@@ -63,7 +63,7 @@ export const HomePage = () => {
               );
             })}
 
-          <button className="col-2 btn btn-primary">see all</button>
+          {/* <button className="col-2 btn btn-primary">see all</button> */}
         </div>
         <div className="row p-4  g-2 px-6 align-items-end "></div>
       </section>
@@ -82,7 +82,8 @@ export const HomePage = () => {
             news
               .map((noticia) => {
                 return (
-                  <div className="col-12  col-md-6  col-lg-3" key={noticia.id}>
+                   
+                    <div className="col-12  col-md-6  col-lg-3" key={noticia.id}>
                     <TopicCard noticia={noticia} />
                   </div>
                 );
@@ -103,10 +104,11 @@ export const HomePage = () => {
         </div>
         <div className="row p-3 px-md-5">
        {
-        events && events.map((noticia)=>{
-        return (<div className="col-12" key={noticia.id}>
+        events && events.map((noticia, i)=>{
+        return (
+       i < 8 ? <div className="col-12" key={noticia.id}>
               <TrendyNowCard noticia={noticia}/>
-          </div>)  
+          </div> : "")  
            
         })
        }
@@ -119,7 +121,7 @@ export const HomePage = () => {
       >
         <div className="row p-4 mb-3">
           <div className="col-12 py-2 border-top border-primary border-2">
-            <h2 className="h2 display-3">TECH RAPSODHY</h2>
+            <h2 className="h2 display-3">REVIEWS & RELEASES</h2>
           </div>
         </div>
 
