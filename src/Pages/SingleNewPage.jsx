@@ -9,7 +9,7 @@ export const SingleNewPage = () => {
 
    const [single, setsingle] = useState(singleNew)
 
-console.log(single)
+
   
 
   // const [single, setsingle] = useState(TopHeadlines.articles[0])
@@ -23,7 +23,7 @@ console.log(single)
           <div className="col-12 col-md-8 d-flex justify-content-center justify-content-md-start  ps-0 ps-md-2 pb-0  mb-0 ">
             
           </div>
-          <div className="col-6 col-md-4 d-flex justify-content-md-evenly align-items-center pb-4">
+          <div className="col-4  d-flex justify-content-around justify-content-md-evenly align-items-center pb-4" style={{cursor:"pointer"}}>
             <Facebook />
             <Share />
             <Tweeter />

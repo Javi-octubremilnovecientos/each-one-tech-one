@@ -19,10 +19,10 @@ export const HomePage = () => {
     SearchRapsodhy()
   }, []);
 
-  console.log(news)
+
 
   return (
-    <>
+    <div className="home">
       <section
         className="container-fluid d-flex justify-content-center align-items-center "
         id="hero"
@@ -143,6 +143,6 @@ export const HomePage = () => {
        
         </div>
       </section>
-    </>
+    </div>
   );
 };
